@@ -7,51 +7,52 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForAnalyzing = "YES"
             buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
-            buildForArchiving = "YES">
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '502CCDB8DC50EF4E4D3E5F93'
-               BlueprintName = 'iVictim'
-               ReferencedContainer = 'container:iVictim.xcodeproj'
-               BuildableName = 'iVictim.app'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "502CCDB8DC50EF4E4D3E5F93"
+               BuildableName = "iVictim.app"
+               BlueprintName = "iVictim"
+               ReferencedContainer = "container:iVictim.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
-      <AdditionalOptions>
-      </AdditionalOptions>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9471CEDA450638C6C1E16B35'
-               BlueprintName = 'UnitTests'
-               ReferencedContainer = 'container:iVictim.xcodeproj'
-               BuildableName = 'UnitTests.bundle'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9471CEDA450638C6C1E16B35"
+               BuildableName = "UnitTests.xctest"
+               BlueprintName = "UnitTests"
+               ReferencedContainer = "container:iVictim.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
-            BuildableIdentifier = 'primary'
-            BlueprintIdentifier = '502CCDB8DC50EF4E4D3E5F93'
-            BlueprintName = 'iVictim'
-            ReferencedContainer = 'container:iVictim.xcodeproj'
-            BuildableName = 'iVictim.app'>
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "502CCDB8DC50EF4E4D3E5F93"
+            BuildableName = "iVictim.app"
+            BlueprintName = "iVictim"
+            ReferencedContainer = "container:iVictim.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -59,34 +60,34 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      buildConfiguration = "Debug"
       allowLocationSimulation = "YES">
-      <AdditionalOptions>
-      </AdditionalOptions>
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
-            BuildableIdentifier = 'primary'
-            BlueprintIdentifier = '502CCDB8DC50EF4E4D3E5F93'
-            BlueprintName = 'iVictim'
-            ReferencedContainer = 'container:iVictim.xcodeproj'
-            BuildableName = 'iVictim.app'>
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "502CCDB8DC50EF4E4D3E5F93"
+            BuildableName = "iVictim.app"
+            BlueprintName = "iVictim"
+            ReferencedContainer = "container:iVictim.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES"
-      buildConfiguration = "Release"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <BuildableProductRunnable>
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
-            BuildableIdentifier = 'primary'
-            BlueprintIdentifier = '502CCDB8DC50EF4E4D3E5F93'
-            BlueprintName = 'iVictim'
-            ReferencedContainer = 'container:iVictim.xcodeproj'
-            BuildableName = 'iVictim.app'>
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "502CCDB8DC50EF4E4D3E5F93"
+            BuildableName = "iVictim.app"
+            BlueprintName = "iVictim"
+            ReferencedContainer = "container:iVictim.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
