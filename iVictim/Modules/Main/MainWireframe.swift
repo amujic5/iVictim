@@ -34,6 +34,11 @@ extension MainWireframe: MenuViewControllerOutput {
         
         navigationController.pushViewController(view, animated: true)
     }
+    
+    func presentLocalStorage() {
+        let localStorage: LocalStorageViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(localStorage, animated: true)
+    }
 }
 
 extension MainWireframe: HomeViewControllerOutput {

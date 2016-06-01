@@ -17,6 +17,8 @@
 		4384DC761CFE215C00FEAD22 /* MainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC751CFE215C00FEAD22 /* MainWireframe.swift */; };
 		4384DC7F1CFE219800FEAD22 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC7A1CFE219800FEAD22 /* MenuViewController.swift */; };
 		4384DC831CFE2CED00FEAD22 /* BadLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC821CFE2CED00FEAD22 /* BadLogInViewController.swift */; };
+		43BB81771CFEBF2300591292 /* LocalStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */; };
+		43BB81791CFEC8D900591292 /* RealmSenstiveDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */; };
 		7904D1AAA59E795537141296 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2555CE71D43A4EFADDF0FE2 /* Constants.swift */; };
 		A3C2B5F5D4102FFCAE13A24B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2163AF44E425907F735CE6 /* Foundation.framework */; };
 		B64592DAE37DCA68E462B5ED /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E927956751CF79E6066E /* InteractorInterface.swift */; };
@@ -51,6 +53,8 @@
 		4384DC751CFE215C00FEAD22 /* MainWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWireframe.swift; sourceTree = "<group>"; };
 		4384DC7A1CFE219800FEAD22 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4384DC821CFE2CED00FEAD22 /* BadLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadLogInViewController.swift; sourceTree = "<group>"; };
+		43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorageViewController.swift; sourceTree = "<group>"; };
+		43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSenstiveDataModel.swift; sourceTree = "<group>"; };
 		4CD6C976323ED09751A2A008 /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5BD7607F3B70A398A40C60EB /* Pods-iVictim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVictim.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVictim/Pods-iVictim.debug.xcconfig"; sourceTree = "<group>"; };
 		7F5E1ECC5407467F46C6D99E /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 				4384DC821CFE2CED00FEAD22 /* BadLogInViewController.swift */,
 			);
 			path = "Bad LogIn";
+			sourceTree = "<group>";
+		};
+		43BB81751CFEBF1500591292 /* Local Storage */ = {
+			isa = PBXGroup;
+			children = (
+				43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */,
+				43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */,
+			);
+			path = "Local Storage";
 			sourceTree = "<group>";
 		};
 		536AC0568C03CDC860034B58 /* UnitTests */ = {
@@ -322,6 +335,7 @@
 		D341B35596BA7CD46A81C7B0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				43BB81751CFEBF1500591292 /* Local Storage */,
 				4384DC811CFE2CDE00FEAD22 /* Bad LogIn */,
 				4384DC691CFE180400FEAD22 /* Home */,
 				4384DC6A1CFE180400FEAD22 /* Menu */,
@@ -544,7 +558,9 @@
 				7904D1AAA59E795537141296 /* Constants.swift in Sources */,
 				4384DC681CFE162C00FEAD22 /* View.swift in Sources */,
 				4384DC761CFE215C00FEAD22 /* MainWireframe.swift in Sources */,
+				43BB81791CFEC8D900591292 /* RealmSenstiveDataModel.swift in Sources */,
 				4384DC731CFE181A00FEAD22 /* HomeViewController.swift in Sources */,
+				43BB81771CFEBF2300591292 /* LocalStorageViewController.swift in Sources */,
 				2C654D05A1C674E5D68F6CC2 /* Progressable.swift in Sources */,
 				4384DC661CFE162C00FEAD22 /* CellMagic.swift in Sources */,
 				C7A10632603F606C93FC98D7 /* ViewInterface.swift in Sources */,

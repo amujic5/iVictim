@@ -12,6 +12,7 @@ import UIKit
 
 protocol MenuViewControllerOutput {
     func presentBadLogIn()
+    func presentLocalStorage()
 }
 
 final class MenuViewController: UIViewController {
@@ -53,14 +54,18 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         switch MenuItem.items[indexPath.row] {
         case .BadLogin:
             output.presentBadLogIn()
+        case .LocalStorage:
+            output.presentLocalStorage()
         }
+        
     }
 }
 
 enum MenuItem: String {
     case BadLogin
+    case LocalStorage
     
     static var items: [MenuItem] {
-        return [MenuItem.BadLogin]
+        return [MenuItem.BadLogin, MenuItem.LocalStorage]
     }
 }

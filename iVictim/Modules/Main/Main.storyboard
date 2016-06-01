@@ -195,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="202" y="1273"/>
         </scene>
-        <!--Bad Log In View Controller-->
+        <!--Bad Log In-->
         <scene sceneID="SG7-oF-gNv">
             <objects>
-                <viewController storyboardIdentifier="BadLogInViewController" id="q61-fk-rPt" customClass="BadLogInViewController" customModule="iVictim" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BadLogInViewController" title="Bad Log In" id="q61-fk-rPt" customClass="BadLogInViewController" customModule="iVictim" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fM6-dk-QlZ"/>
                         <viewControllerLayoutGuide type="bottom" id="POe-NT-JQh"/>
@@ -276,6 +276,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fap-gq-k9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781.5" y="1137.5"/>
+        </scene>
+        <!--Local Storage-->
+        <scene sceneID="GXp-24-aQz">
+            <objects>
+                <viewController storyboardIdentifier="LocalStorageViewController" title="Local Storage" id="usy-70-GrT" customClass="LocalStorageViewController" customModule="iVictim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VDg-J7-AX5"/>
+                        <viewControllerLayoutGuide type="bottom" id="1GA-Gb-Peq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5da-nA-Bld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cbx-Nc-NOc">
+                                <rect key="frame" x="0.0" y="179" width="375" height="488"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Basic" textLabel="CR2-BZ-Z8Q" style="IBUITableViewCellStyleDefault" id="UVx-2s-VP9">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UVx-2s-VP9" id="lY5-GZ-WTx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CR2-BZ-Z8Q">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="usy-70-GrT" id="ncM-WH-8lL"/>
+                                    <outlet property="delegate" destination="usy-70-GrT" id="Cc2-U9-c5b"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This part is about insecure data storage. Wire something into the box and save using differenet option." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R21-Zu-qbC">
+                                <rect key="frame" x="20" y="25" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVG-Nl-JBf">
+                                <rect key="frame" x="76" y="119" width="279" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOp-hS-80i">
+                                <rect key="frame" x="20" y="123" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cbx-Nc-NOc" firstAttribute="top" secondItem="QVG-Nl-JBf" secondAttribute="bottom" constant="30" id="1Ad-J6-R7W"/>
+                            <constraint firstAttribute="trailing" secondItem="cbx-Nc-NOc" secondAttribute="trailing" id="HZG-mR-bJ4"/>
+                            <constraint firstItem="QVG-Nl-JBf" firstAttribute="centerY" secondItem="UOp-hS-80i" secondAttribute="centerY" id="NGc-2c-oTv"/>
+                            <constraint firstItem="UOp-hS-80i" firstAttribute="top" secondItem="R21-Zu-qbC" secondAttribute="bottom" constant="77" id="QoC-Zh-FPQ"/>
+                            <constraint firstAttribute="trailing" secondItem="R21-Zu-qbC" secondAttribute="trailing" constant="20" id="agl-aK-t3k"/>
+                            <constraint firstItem="QVG-Nl-JBf" firstAttribute="leading" secondItem="UOp-hS-80i" secondAttribute="trailing" constant="20" id="d9j-wX-Nuj"/>
+                            <constraint firstItem="1GA-Gb-Peq" firstAttribute="top" secondItem="cbx-Nc-NOc" secondAttribute="bottom" id="ebz-Yt-VMe"/>
+                            <constraint firstItem="R21-Zu-qbC" firstAttribute="leading" secondItem="5da-nA-Bld" secondAttribute="leading" constant="20" id="gFM-tr-3lR"/>
+                            <constraint firstItem="UOp-hS-80i" firstAttribute="leading" secondItem="R21-Zu-qbC" secondAttribute="leading" id="hB0-Ps-N2p"/>
+                            <constraint firstItem="R21-Zu-qbC" firstAttribute="top" secondItem="VDg-J7-AX5" secondAttribute="bottom" constant="5" id="m06-wp-yL9"/>
+                            <constraint firstItem="cbx-Nc-NOc" firstAttribute="leading" secondItem="5da-nA-Bld" secondAttribute="leading" id="r8B-8k-biW"/>
+                            <constraint firstItem="QVG-Nl-JBf" firstAttribute="trailing" secondItem="R21-Zu-qbC" secondAttribute="trailing" id="zaA-TX-byE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="textField" destination="QVG-Nl-JBf" id="Ysz-YR-KHC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGd-lQ-6i4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799.5" y="1901.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cPh-CB-I86">
