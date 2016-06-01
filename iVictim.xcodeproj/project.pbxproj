@@ -10,6 +10,9 @@
 		002B065261A2EB77B375F2A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCEE9B1AAE4A917D5D960D /* AppDelegate.swift */; };
 		0A70546018E7D86BFC672CCA /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F9D11BE96A89AD3780310 /* PresenterInterface.swift */; };
 		2C654D05A1C674E5D68F6CC2 /* Progressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A77C173FB16974DF05FA2F9 /* Progressable.swift */; };
+		4313B2F41CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4313B2F21CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld */; };
+		4313B2FE1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B2FC1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift */; };
+		4313B2FF1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B2FD1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift */; };
 		4384DC661CFE162C00FEAD22 /* CellMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC631CFE162C00FEAD22 /* CellMagic.swift */; };
 		4384DC671CFE162C00FEAD22 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC641CFE162C00FEAD22 /* Storyboard.swift */; };
 		4384DC681CFE162C00FEAD22 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC651CFE162C00FEAD22 /* View.swift */; };
@@ -46,6 +49,9 @@
 		20FCEE9B1AAE4A917D5D960D /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22B1E927956751CF79E6066E /* InteractorInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 		27E05DB3186DAE68BFFC4902 /* ViewInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		4313B2F31CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataSensitiveModel.xcdatamodel; sourceTree = "<group>"; };
+		4313B2FC1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataSensitiveModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4313B2FD1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataSensitiveModel.swift; sourceTree = "<group>"; };
 		4384DC631CFE162C00FEAD22 /* CellMagic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMagic.swift; sourceTree = "<group>"; };
 		4384DC641CFE162C00FEAD22 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		4384DC651CFE162C00FEAD22 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -165,6 +171,9 @@
 			children = (
 				43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */,
 				43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */,
+				4313B2F21CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld */,
+				4313B2FC1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift */,
+				4313B2FD1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift */,
 			);
 			path = "Local Storage";
 			sourceTree = "<group>";
@@ -424,7 +433,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "";
 			};
@@ -555,15 +564,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				002B065261A2EB77B375F2A3 /* AppDelegate.swift in Sources */,
+				4313B2FF1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift in Sources */,
 				7904D1AAA59E795537141296 /* Constants.swift in Sources */,
 				4384DC681CFE162C00FEAD22 /* View.swift in Sources */,
 				4384DC761CFE215C00FEAD22 /* MainWireframe.swift in Sources */,
 				43BB81791CFEC8D900591292 /* RealmSenstiveDataModel.swift in Sources */,
 				4384DC731CFE181A00FEAD22 /* HomeViewController.swift in Sources */,
 				43BB81771CFEBF2300591292 /* LocalStorageViewController.swift in Sources */,
+				4313B2F41CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld in Sources */,
 				2C654D05A1C674E5D68F6CC2 /* Progressable.swift in Sources */,
 				4384DC661CFE162C00FEAD22 /* CellMagic.swift in Sources */,
 				C7A10632603F606C93FC98D7 /* ViewInterface.swift in Sources */,
+				4313B2FE1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift in Sources */,
 				0A70546018E7D86BFC672CCA /* PresenterInterface.swift in Sources */,
 				B64592DAE37DCA68E462B5ED /* InteractorInterface.swift in Sources */,
 				4384DC831CFE2CED00FEAD22 /* BadLogInViewController.swift in Sources */,
@@ -609,6 +621,7 @@
 			baseConfigurationReference = 99B0A14E63BEAC39FF22967A /* Pods-iVictim.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -617,6 +630,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "iVictim/Application/iVictim-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -694,6 +708,7 @@
 			baseConfigurationReference = 5BD7607F3B70A398A40C60EB /* Pods-iVictim.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "iVictim/Resources/Other-Sources/Info.plist";
@@ -701,6 +716,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "iVictim/Application/iVictim-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -791,6 +808,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4313B2F21CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4313B2F31CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodel */,
+			);
+			currentVersion = 4313B2F31CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodel */;
+			path = CoreDataSensitiveModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 333A8D7DD5E860F4EEBF8B0A /* Project object */;
 }

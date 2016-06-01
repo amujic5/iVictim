@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import CoreData
 
 final class RealmSensitiveDataModel: Object {
     

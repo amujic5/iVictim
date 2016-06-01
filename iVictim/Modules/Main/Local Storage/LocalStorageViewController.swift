@@ -8,6 +8,7 @@
 
 import UIKit
 import Locksmith
+import CoreData
 
 final class LocalStorageViewController: UIViewController {
 
@@ -39,7 +40,35 @@ final class LocalStorageViewController: UIViewController {
             plist[keyForStorage] = textToSave
             NSDictionary(dictionary: plist).writeToFile(filePath, atomically: true)
         case .CoreData:
-            break
+            let appDelegate =
+                UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            let managedContext = appDelegate.managedObjectContext
+            
+            // try fetch and print
+            let employeesFetch = NSFetchRequest(entityName: "CoreDataSensitiveModel")
+            
+            do {
+                let fetchedEmployees = try managedContext.executeFetchRequest(employeesFetch) as! [CoreDataSensitiveModel]
+                fetchedEmployees.forEach {
+                    print("\($0.key): \($0.data)")
+                }
+            } catch {
+                fatalError("Failed to fetch employees: \(error)")
+            }
+            
+            // save
+            let coreDataSenestiveMode = NSEntityDescription.insertNewObjectForEntityForName("CoreDataSensitiveModel", inManagedObjectContext: managedContext) as! CoreDataSensitiveModel
+            coreDataSenestiveMode.key = keyForStorage
+            coreDataSenestiveMode.data = textToSave
+
+            do {
+                try managedContext.save()
+                
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            }
+            
         case .Keychain:
             let dictionary = Locksmith.loadDataForUserAccount("myUserAccount")
             print(dictionary)
