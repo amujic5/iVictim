@@ -94,18 +94,33 @@ class BruteForceViewController: UIViewController {
         
         NSUserDefaults.standardUserDefaults().setObject(base64String, forKey: "BruteForce")
         NSUserDefaults.standardUserDefaults().synchronize()
+        
+        let hash = (base64String! + pin).sha256()
+        NSUserDefaults.standardUserDefaults().setObject(hash, forKey: "BruteForceHash")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     private func _loadDataWithPin(pin: String) {
-        if let encryptedBase64: String = NSUserDefaults.standardUserDefaults().objectForKey("BruteForce") as? String {
+        if let plainText = _plainTextWithPin(pin) {
+            UIAlertView(title: "Success", message: "Data: \(plainText)", delegate: nil, cancelButtonTitle: "Ok").show()
+        } else {
+           UIAlertView(title: "Error", message: "Wrong pin", delegate: nil, cancelButtonTitle: "Ok").show()
+        }
+    }
+    
+    private func _plainTextWithPin(pin: String) -> String? {
+        if let encryptedBase64: String = NSUserDefaults.standardUserDefaults().objectForKey("BruteForce") as? String, hashToComapre = NSUserDefaults.standardUserDefaults().objectForKey("BruteForceHash") as? String{
             if let decrypted = try? encryptedBase64.decryptBase64ToString(AES(key: _aesKeyForString(pin), iv: "0123456789012345")) {
-                UIAlertView(title: "Success", message: "Data: \(decrypted)", delegate: nil, cancelButtonTitle: "Ok").show()
-            } else {
-                UIAlertView(title: "Error", message: "Wrong pin", delegate: nil, cancelButtonTitle: "Ok").show()
+                
+                if (encryptedBase64 + pin).sha256() == hashToComapre {
+                    return decrypted
+                }
             }
         } else {
             UIAlertView(title: "Error", message: "No data", delegate: nil, cancelButtonTitle: "Ok").show()
         }
+        
+        return nil
     }
     
     @IBAction func loadButtonClicked(sender: UIButton) {
