@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Locksmith
 
 final class LocalStorageViewController: UIViewController {
 
@@ -40,7 +41,9 @@ final class LocalStorageViewController: UIViewController {
         case .CoreData:
             break
         case .Keychain:
-            break
+            let dictionary = Locksmith.loadDataForUserAccount("myUserAccount")
+            print(dictionary)
+            try! Locksmith.updateData([keyForStorage: textToSave], forUserAccount: "myUserAccount")
         case .Realm:
             var realmModel: RealmSensitiveDataModel
             if let realmSensitiveDataModel = RealmSensitiveDataModel.objectForKey(keyForStorage) {
