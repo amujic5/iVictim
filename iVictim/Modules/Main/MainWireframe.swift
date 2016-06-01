@@ -39,6 +39,11 @@ extension MainWireframe: MenuViewControllerOutput {
         let localStorage: LocalStorageViewController = storyboard.instantiateViewController()
         navigationController.pushViewController(localStorage, animated: true)
     }
+    
+    func presentBruteForce() {
+        let view: BruteForceViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
+    }
 }
 
 extension MainWireframe: HomeViewControllerOutput {

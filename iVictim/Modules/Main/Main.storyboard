@@ -277,6 +277,119 @@
             </objects>
             <point key="canvasLocation" x="781.5" y="1137.5"/>
         </scene>
+        <!--Brute Force-->
+        <scene sceneID="yAJ-Zy-Gcf">
+            <objects>
+                <viewController storyboardIdentifier="BruteForceViewController" title="Brute Force" id="3jE-st-Xe0" customClass="BruteForceViewController" customModule="iVictim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5oa-wk-TfX"/>
+                        <viewControllerLayoutGuide type="bottom" id="SXf-tH-ced"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7ft-yZ-PfM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write something to save:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92Q-Cd-vdo">
+                                <rect key="frame" x="92" y="190" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0OE-EP-I4g">
+                                <rect key="frame" x="20" y="231" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose pin type: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykA-hf-fCg">
+                                <rect key="frame" x="120" y="84" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MfY-ji-Mj8">
+                                <rect key="frame" x="84" y="131" width="207" height="29"/>
+                                <segments>
+                                    <segment title="4 digit pin"/>
+                                    <segment title="6 alfa-numeric"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnb-6T-Zft">
+                                <rect key="frame" x="20" y="290" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.60988898030000005" blue="1" alpha="0.79719172299999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3iH-vz-CzT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius2">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="3jE-st-Xe0" eventType="touchUpInside" id="Smk-E3-adR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roa-1Z-YdS">
+                                <rect key="frame" x="20" y="449" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.60988898030000005" blue="1" alpha="0.79719172299999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pa4-Nv-uxi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius2">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loadButtonClicked:" destination="3jE-st-Xe0" eventType="touchUpInside" id="FKu-IJ-WpC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now try to load what you have saved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3a-u7-yox">
+                                <rect key="frame" x="47.5" y="390" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0OE-EP-I4g" secondAttribute="trailing" constant="20" id="4RP-uM-KfS"/>
+                            <constraint firstAttribute="trailing" secondItem="Roa-1Z-YdS" secondAttribute="trailing" constant="20" id="EOg-fy-zu1"/>
+                            <constraint firstItem="Lnb-6T-Zft" firstAttribute="leading" secondItem="7ft-yZ-PfM" secondAttribute="leading" constant="20" id="O8f-w3-oqA"/>
+                            <constraint firstItem="92Q-Cd-vdo" firstAttribute="centerX" secondItem="7ft-yZ-PfM" secondAttribute="centerX" id="R89-fn-iHg"/>
+                            <constraint firstItem="ykA-hf-fCg" firstAttribute="top" secondItem="5oa-wk-TfX" secondAttribute="bottom" constant="20" id="SCz-PK-WQb"/>
+                            <constraint firstItem="MfY-ji-Mj8" firstAttribute="centerX" secondItem="7ft-yZ-PfM" secondAttribute="centerX" id="Sx3-jc-wRu"/>
+                            <constraint firstItem="MfY-ji-Mj8" firstAttribute="top" secondItem="ykA-hf-fCg" secondAttribute="bottom" constant="26" id="WST-VT-COL"/>
+                            <constraint firstItem="92Q-Cd-vdo" firstAttribute="top" secondItem="MfY-ji-Mj8" secondAttribute="bottom" constant="31" id="YqP-QP-Tbw"/>
+                            <constraint firstItem="Roa-1Z-YdS" firstAttribute="top" secondItem="Y3a-u7-yox" secondAttribute="bottom" constant="38" id="cUe-gY-vE0"/>
+                            <constraint firstItem="0OE-EP-I4g" firstAttribute="top" secondItem="92Q-Cd-vdo" secondAttribute="bottom" constant="20" id="dtA-Jl-n6S"/>
+                            <constraint firstItem="Y3a-u7-yox" firstAttribute="top" secondItem="Lnb-6T-Zft" secondAttribute="bottom" constant="50" id="htt-mw-auv"/>
+                            <constraint firstItem="ykA-hf-fCg" firstAttribute="centerX" secondItem="7ft-yZ-PfM" secondAttribute="centerX" id="oXh-YS-p3j"/>
+                            <constraint firstItem="0OE-EP-I4g" firstAttribute="leading" secondItem="7ft-yZ-PfM" secondAttribute="leading" constant="20" id="pj5-fq-rYe"/>
+                            <constraint firstItem="Y3a-u7-yox" firstAttribute="centerX" secondItem="7ft-yZ-PfM" secondAttribute="centerX" id="qdz-Ua-QKV"/>
+                            <constraint firstItem="Roa-1Z-YdS" firstAttribute="leading" secondItem="7ft-yZ-PfM" secondAttribute="leading" constant="20" id="qex-pc-xUp"/>
+                            <constraint firstItem="Lnb-6T-Zft" firstAttribute="top" secondItem="0OE-EP-I4g" secondAttribute="bottom" constant="29" id="vod-of-ZcT"/>
+                            <constraint firstAttribute="trailing" secondItem="Lnb-6T-Zft" secondAttribute="trailing" constant="20" id="vsr-AA-O2w"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="MfY-ji-Mj8" id="PCI-jv-ouM"/>
+                        <outlet property="textField" destination="0OE-EP-I4g" id="LjG-y3-jE3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yy3-QM-G4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.5" y="1966.5"/>
+        </scene>
         <!--Local Storage-->
         <scene sceneID="GXp-24-aQz">
             <objects>

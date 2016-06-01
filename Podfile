@@ -4,4 +4,5 @@ use_frameworks!
 target 'iVictim' do
     pod 'RealmSwift'
     pod 'Locksmith'
+    pod 'CryptoSwift'
 end

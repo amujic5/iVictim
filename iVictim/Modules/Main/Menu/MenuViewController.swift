@@ -13,6 +13,7 @@ import UIKit
 protocol MenuViewControllerOutput {
     func presentBadLogIn()
     func presentLocalStorage()
+    func presentBruteForce()
 }
 
 final class MenuViewController: UIViewController {
@@ -56,6 +57,8 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             output.presentBadLogIn()
         case .LocalStorage:
             output.presentLocalStorage()
+        case .BruteForce:
+            output.presentBruteForce()
         }
         
     }
@@ -63,9 +66,10 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
 
 enum MenuItem: String {
     case BadLogin
-    case LocalStorage
+    case LocalStorage = "Local Storage"
+    case BruteForce = "Brute Force"
     
     static var items: [MenuItem] {
-        return [MenuItem.BadLogin, MenuItem.LocalStorage]
+        return [MenuItem.BadLogin, MenuItem.LocalStorage, MenuItem.BruteForce]
     }
 }
