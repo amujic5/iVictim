@@ -594,6 +594,90 @@
             </objects>
             <point key="canvasLocation" x="916.5" y="380.5"/>
         </scene>
+        <!--Transport Layer Security-->
+        <scene sceneID="W8k-Ij-zQ8">
+            <objects>
+                <viewController storyboardIdentifier="TransportLayerSecurityViewController" title="Transport Layer Security" id="gxV-kb-pvq" customClass="TransportLayerSecurityViewController" customModule="iVictim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ge-jH-rGD"/>
+                        <viewControllerLayoutGuide type="bottom" id="GUe-1Y-8J7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GBO-LN-ayh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ard-wz-1YR">
+                                <rect key="frame" x="15" y="99" width="345" height="101.5"/>
+                                <string key="text">From iOS9 default transport layer security will not allow http requests. It will only allow https requests. However, this option can be easilt modifited. By cliking buttons check http and http requests.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvo-cA-o7B">
+                                <rect key="frame" x="218" y="244" width="127" height="30"/>
+                                <state key="normal" title="https://github.com"/>
+                                <connections>
+                                    <action selector="httpsButtonClicked:" destination="gxV-kb-pvq" eventType="touchUpInside" id="B29-He-cP9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkr-Yy-lxz">
+                                <rect key="frame" x="149" y="294" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-xu-h12">
+                                <rect key="frame" x="15" y="328" width="345" height="324"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-lj-Rmu">
+                                <rect key="frame" x="240" y="295" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcs-22-TlT">
+                                <rect key="frame" x="30" y="244" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hhP-Q7-P6n"/>
+                                </constraints>
+                                <state key="normal" title="http://github.com"/>
+                                <connections>
+                                    <action selector="httpButtonClicked:" destination="gxV-kb-pvq" eventType="touchUpInside" id="LFe-Za-GGP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zvo-cA-o7B" firstAttribute="centerY" secondItem="Dcs-22-TlT" secondAttribute="centerY" id="2Fo-jJ-nu3"/>
+                            <constraint firstItem="pkg-lj-Rmu" firstAttribute="centerY" secondItem="xkr-Yy-lxz" secondAttribute="centerY" id="DH4-pO-eFD"/>
+                            <constraint firstAttribute="trailing" secondItem="zvo-cA-o7B" secondAttribute="trailing" constant="30" id="Dcy-Ur-w20"/>
+                            <constraint firstItem="D2c-xu-h12" firstAttribute="leading" secondItem="GBO-LN-ayh" secondAttribute="leading" constant="15" id="FGf-vH-22Q"/>
+                            <constraint firstItem="ard-wz-1YR" firstAttribute="leading" secondItem="GBO-LN-ayh" secondAttribute="leading" constant="15" id="GJg-Qg-Dx6"/>
+                            <constraint firstItem="ard-wz-1YR" firstAttribute="top" secondItem="4ge-jH-rGD" secondAttribute="bottom" constant="35" id="GyI-V5-RIy"/>
+                            <constraint firstAttribute="trailing" secondItem="D2c-xu-h12" secondAttribute="trailing" constant="15" id="ODk-ms-N2Y"/>
+                            <constraint firstItem="pkg-lj-Rmu" firstAttribute="leading" secondItem="xkr-Yy-lxz" secondAttribute="trailing" constant="15" id="TLd-dW-cGH"/>
+                            <constraint firstItem="xkr-Yy-lxz" firstAttribute="centerX" secondItem="GBO-LN-ayh" secondAttribute="centerX" id="ZPd-ew-Ktb"/>
+                            <constraint firstAttribute="trailing" secondItem="ard-wz-1YR" secondAttribute="trailing" constant="15" id="cgC-QQ-MrN"/>
+                            <constraint firstItem="zvo-cA-o7B" firstAttribute="height" secondItem="Dcs-22-TlT" secondAttribute="height" id="cqz-qh-OaY"/>
+                            <constraint firstItem="Dcs-22-TlT" firstAttribute="leading" secondItem="GBO-LN-ayh" secondAttribute="leading" constant="30" id="fWf-8z-gox"/>
+                            <constraint firstItem="xkr-Yy-lxz" firstAttribute="top" secondItem="zvo-cA-o7B" secondAttribute="bottom" constant="20" id="jBS-dL-Usl"/>
+                            <constraint firstItem="GUe-1Y-8J7" firstAttribute="top" secondItem="D2c-xu-h12" secondAttribute="bottom" constant="15" id="oIp-3j-eLg"/>
+                            <constraint firstItem="D2c-xu-h12" firstAttribute="top" secondItem="xkr-Yy-lxz" secondAttribute="bottom" constant="13" id="wmG-Ud-Tr3"/>
+                            <constraint firstItem="Dcs-22-TlT" firstAttribute="top" secondItem="ard-wz-1YR" secondAttribute="bottom" constant="43.5" id="zWd-mS-qSA"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="pkg-lj-Rmu" id="7Ik-ST-vOt"/>
+                        <outlet property="textView" destination="D2c-xu-h12" id="wwr-30-sP7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqJ-xx-Etn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1320.5" y="380.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_view_headline" width="17" height="14"/>

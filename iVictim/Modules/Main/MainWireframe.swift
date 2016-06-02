@@ -30,6 +30,11 @@ final class MainWireframe: BaseWireframe {
 
 extension MainWireframe: MenuViewControllerOutput {
     
+    func presentTransportLayerSecurity() {
+        let view: TransportLayerSecurityViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
+    }
+    
     func presentSSLPinning() {
         let view: SSLPinningViewController = storyboard.instantiateViewController()
         navigationController.pushViewController(view, animated: true)

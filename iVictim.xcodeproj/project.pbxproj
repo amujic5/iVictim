@@ -23,6 +23,7 @@
 		4384DC831CFE2CED00FEAD22 /* BadLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC821CFE2CED00FEAD22 /* BadLogInViewController.swift */; };
 		43A229371D00A7EB00E65D6C /* SSLPinningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A229361D00A7EB00E65D6C /* SSLPinningViewController.swift */; };
 		43A229391D00A7FE00E65D6C /* github.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 43A229381D00A7FE00E65D6C /* github.com.cer */; };
+		43A2293C1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A2293B1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift */; };
 		43BB81771CFEBF2300591292 /* LocalStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */; };
 		43BB81791CFEC8D900591292 /* RealmSenstiveDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */; };
 		7904D1AAA59E795537141296 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2555CE71D43A4EFADDF0FE2 /* Constants.swift */; };
@@ -65,6 +66,7 @@
 		4384DC821CFE2CED00FEAD22 /* BadLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadLogInViewController.swift; sourceTree = "<group>"; };
 		43A229361D00A7EB00E65D6C /* SSLPinningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLPinningViewController.swift; sourceTree = "<group>"; };
 		43A229381D00A7FE00E65D6C /* github.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = github.com.cer; sourceTree = "<group>"; };
+		43A2293B1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportLayerSecurityViewController.swift; sourceTree = "<group>"; };
 		43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorageViewController.swift; sourceTree = "<group>"; };
 		43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSenstiveDataModel.swift; sourceTree = "<group>"; };
 		4CD6C976323ED09751A2A008 /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +189,14 @@
 				43A229361D00A7EB00E65D6C /* SSLPinningViewController.swift */,
 			);
 			path = "SSL Pinning";
+			sourceTree = "<group>";
+		};
+		43A2293A1D00ACE600E65D6C /* Transport Layer Security */ = {
+			isa = PBXGroup;
+			children = (
+				43A2293B1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift */,
+			);
+			path = "Transport Layer Security";
 			sourceTree = "<group>";
 		};
 		43BB81751CFEBF1500591292 /* Local Storage */ = {
@@ -367,6 +377,7 @@
 		D341B35596BA7CD46A81C7B0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				43A2293A1D00ACE600E65D6C /* Transport Layer Security */,
 				43A229351D00A7D600E65D6C /* SSL Pinning */,
 				4313B3211CFF754400D269FF /* Bruce Force */,
 				43BB81751CFEBF1500591292 /* Local Storage */,
@@ -603,6 +614,7 @@
 				2C654D05A1C674E5D68F6CC2 /* Progressable.swift in Sources */,
 				4384DC661CFE162C00FEAD22 /* CellMagic.swift in Sources */,
 				C7A10632603F606C93FC98D7 /* ViewInterface.swift in Sources */,
+				43A2293C1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift in Sources */,
 				4313B2FE1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift in Sources */,
 				0A70546018E7D86BFC672CCA /* PresenterInterface.swift in Sources */,
 				B64592DAE37DCA68E462B5ED /* InteractorInterface.swift in Sources */,
