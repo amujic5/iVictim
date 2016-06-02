@@ -98,6 +98,7 @@
                                     </containerView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="ajh-Cz-yAo" firstAttribute="top" secondItem="YOs-6I-AD3" secondAttribute="top" id="2if-pS-F7p"/>
                                     <constraint firstItem="46M-kl-uDV" firstAttribute="top" secondItem="YOs-6I-AD3" secondAttribute="top" id="2jP-Y2-SeX"/>
@@ -114,9 +115,13 @@
                                         <exclude reference="Uim-zX-uce"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="d6k-9Z-wHw" appends="YES" id="wV2-JM-Vje"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="YOs-6I-AD3" firstAttribute="leading" secondItem="zei-kx-sCS" secondAttribute="leading" id="Ay2-8J-teH"/>
                             <constraint firstItem="YOs-6I-AD3" firstAttribute="top" secondItem="zei-kx-sCS" secondAttribute="top" id="DuU-pq-RnZ"/>
@@ -132,13 +137,22 @@
                                 <exclude reference="ysw-ft-cLe"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HD5-ol-R2j" appends="YES" id="cer-vt-N4r"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="edgePan" destination="HD5-ol-R2j" id="EpW-bN-Sli"/>
                         <outlet property="menuBackgroundVuew" destination="ajh-Cz-yAo" id="n1Q-PQ-VSv"/>
                         <outlet property="menuParentView" destination="YOs-6I-AD3" id="Sp6-Qb-gig"/>
+                        <outlet property="panToClose" destination="d6k-9Z-wHw" id="aem-dY-ZQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCv-h1-7Gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="d6k-9Z-wHw"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="HD5-ol-R2j">
+                    <rectEdge key="edges" left="YES"/>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="159" y="421"/>
         </scene>

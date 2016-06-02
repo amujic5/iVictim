@@ -24,6 +24,9 @@ final class HomeViewController: UIViewController {
     weak var menuViewController: MenuViewController?
     @IBOutlet weak var menuBackgroundVuew: UIView!
     @IBOutlet weak var menuParentView: UIView!
+    @IBOutlet var edgePan: UIScreenEdgePanGestureRecognizer!
+    @IBOutlet var panToClose: UIPanGestureRecognizer!
+    
     
     // MARK: - View lifecycle -
     override func viewDidLoad() {
@@ -31,6 +34,9 @@ final class HomeViewController: UIViewController {
         
         self.menuBackgroundVuew.alpha = 0
         self.menuParentView.transform = CGAffineTransformMakeTranslation(-screenWidth(), 0)
+        
+        edgePan.addTarget(self, action: #selector(HomeViewController.didEdgePan(_:)))
+        panToClose.addTarget(self, action: #selector(HomeViewController.didPan(_:)))
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -38,7 +44,57 @@ final class HomeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
   
-    // MARK: - Public functions -
+    // MARK: - pan -
+    
+    @objc func didEdgePan(recognizer: UIPanGestureRecognizer)  {
+        let translation = recognizer.translationInView(recognizer.view!.superview!)
+        let translationPercentage = max(min(translation.x / (screenWidth()), 1), 0)
+        
+        switch recognizer.state {
+        case .Ended, .Cancelled:
+            let translationVelocity = recognizer.velocityInView(recognizer.view!.superview!)
+            let velocityPercentage = translationVelocity.x / (screenWidth())
+            
+            UIView.animateWithDuration(0.2, animations: {
+                if velocityPercentage > 0.5 {
+                    self._showMenu()
+                } else {
+                    self._hideMenu()
+                }
+            })
+            
+        default:
+            menuParentView.transform = CGAffineTransformMakeTranslation(translationPercentage * menuParentView.frame.width - menuParentView.frame.width, 0)
+            menuBackgroundVuew.alpha = translationPercentage
+        }
+    }
+    
+    
+    @objc func didPan(recognizer: UIPanGestureRecognizer)  {
+        let translation = recognizer.translationInView(recognizer.view!.superview!)
+        let translationPercentage = 1 - max(min(-translation.x / (screenWidth()*0.87), 1), 0)
+        
+        switch recognizer.state {
+        case .Ended, .Cancelled:
+            let translationVelocity = recognizer.velocityInView(recognizer.view!.superview!)
+            let velocityPercentage = 1 - translationVelocity.x / (screenWidth()*0.87)
+            
+            UIView.animateWithDuration(0.2, animations: {
+                if velocityPercentage < 0.5 {
+                    self.menuParentView.transform = CGAffineTransformMakeTranslation(0, 0)
+                    self.menuBackgroundVuew.alpha = 1
+                } else {
+                    self.menuBackgroundVuew.alpha = 0
+                    self.menuParentView.transform = CGAffineTransformMakeTranslation(-self.menuParentView.frame.width, 0)
+                }
+            })
+            
+        default:
+            menuParentView.transform = CGAffineTransformMakeTranslation(translationPercentage * menuParentView.frame.width - menuParentView.frame.width, 0)
+            menuBackgroundVuew.alpha = translationPercentage
+        }
+    }
+    
 
     // MARK: - IBActions -
   

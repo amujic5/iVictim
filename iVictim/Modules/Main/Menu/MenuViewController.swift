@@ -25,15 +25,8 @@ final class MenuViewController: UIViewController {
     
     // MARK: - View lifecycle -
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        super.viewDidLoad() 
     }
-  
-    // MARK: - Public functions -
-
-    // MARK: - IBActions -
-  
-    // MARK: - Private functions -
 }
 
 
@@ -55,6 +48,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         switch MenuItem.items[indexPath.row] {
         case .BadLogin:
             output.presentBadLogIn()
