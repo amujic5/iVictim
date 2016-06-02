@@ -29,6 +29,12 @@ final class MainWireframe: BaseWireframe {
 
 
 extension MainWireframe: MenuViewControllerOutput {
+    
+    func presentSSLPinning() {
+        let view: SSLPinningViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
+    }
+    
     func presentBadLogIn() {
         let view: BadLogInViewController = storyboard.instantiateViewController()
         
