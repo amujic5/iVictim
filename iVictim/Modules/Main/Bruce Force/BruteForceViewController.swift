@@ -67,7 +67,7 @@ class BruteForceViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setToolbarHidden(false, animated: animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     private func _showAlertToEnterPin(message messsage: String) {
