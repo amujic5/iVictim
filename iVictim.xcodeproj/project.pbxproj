@@ -13,6 +13,9 @@
 		4313B2FF1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B2FD1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift */; };
 		4313B3231CFF755800D269FF /* BruteForceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B3221CFF755800D269FF /* BruteForceViewController.swift */; };
 		43683FA01D00C714008F8156 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683F9F1D00C714008F8156 /* BaseWireframe.swift */; };
+		43683FA51D00CBDF008F8156 /* SecurityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43683FA41D00CBDF008F8156 /* SecurityManager.m */; };
+		43683FAC1D00CDC6008F8156 /* PiracyDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683FAB1D00CDC6008F8156 /* PiracyDetectionViewController.swift */; };
+		43683FD71D00D80B008F8156 /* SecurityManagerSwiftWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683FD61D00D80B008F8156 /* SecurityManagerSwiftWrapper.swift */; };
 		4384DC661CFE162C00FEAD22 /* CellMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC631CFE162C00FEAD22 /* CellMagic.swift */; };
 		4384DC671CFE162C00FEAD22 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC641CFE162C00FEAD22 /* Storyboard.swift */; };
 		4384DC681CFE162C00FEAD22 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384DC651CFE162C00FEAD22 /* View.swift */; };
@@ -46,12 +49,19 @@
 
 /* Begin PBXFileReference section */
 		1D2163AF44E425907F735CE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2000EB8309CA0D9CD5A0868B /* Pods-iVictim7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVictim7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVictim7/Pods-iVictim7.debug.xcconfig"; sourceTree = "<group>"; };
 		20FCEE9B1AAE4A917D5D960D /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4313B2F31CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataSensitiveModel.xcdatamodel; sourceTree = "<group>"; };
 		4313B2FC1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataSensitiveModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4313B2FD1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataSensitiveModel.swift; sourceTree = "<group>"; };
 		4313B3221CFF755800D269FF /* BruteForceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BruteForceViewController.swift; sourceTree = "<group>"; };
 		43683F9F1D00C714008F8156 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		43683FA31D00CBDF008F8156 /* SecurityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityManager.h; sourceTree = "<group>"; };
+		43683FA41D00CBDF008F8156 /* SecurityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityManager.m; sourceTree = "<group>"; };
+		43683FA61D00CC8F008F8156 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		43683FAB1D00CDC6008F8156 /* PiracyDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiracyDetectionViewController.swift; sourceTree = "<group>"; };
+		43683FD51D00D333008F8156 /* iVictim copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iVictim copy-Info.plist"; path = "/Users/Azzi/work/iPhone/iVictim/iVictim copy-Info.plist"; sourceTree = "<absolute>"; };
+		43683FD61D00D80B008F8156 /* SecurityManagerSwiftWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityManagerSwiftWrapper.swift; sourceTree = "<group>"; };
 		4384DC631CFE162C00FEAD22 /* CellMagic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMagic.swift; sourceTree = "<group>"; };
 		4384DC641CFE162C00FEAD22 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		4384DC651CFE162C00FEAD22 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -67,6 +77,8 @@
 		43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSenstiveDataModel.swift; sourceTree = "<group>"; };
 		4CD6C976323ED09751A2A008 /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5BD7607F3B70A398A40C60EB /* Pods-iVictim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVictim.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVictim/Pods-iVictim.debug.xcconfig"; sourceTree = "<group>"; };
+		5C55DAF013E0C39B925CF0EB /* Pods_iVictim7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iVictim7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		600890E233DA8E5275E5A1CB /* Pods-iVictim7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVictim7.release.xcconfig"; path = "Pods/Target Support Files/Pods-iVictim7/Pods-iVictim7.release.xcconfig"; sourceTree = "<group>"; };
 		7F5E1ECC5407467F46C6D99E /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		82FF630AE9883DF459FB1108 /* Pods_iVictim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iVictim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		923552A9DC5AB393D0FBEAEC /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -110,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				20FCEE9B1AAE4A917D5D960D /* AppDelegate.swift */,
+				43683FA61D00CC8F008F8156 /* BridgingHeader.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -120,6 +133,14 @@
 				4313B3221CFF755800D269FF /* BruteForceViewController.swift */,
 			);
 			path = "Bruce Force";
+			sourceTree = "<group>";
+		};
+		43683FA71D00CD86008F8156 /* Piracy Detection */ = {
+			isa = PBXGroup;
+			children = (
+				43683FAB1D00CDC6008F8156 /* PiracyDetectionViewController.swift */,
+			);
+			path = "Piracy Detection";
 			sourceTree = "<group>";
 		};
 		4384DC691CFE180400FEAD22 /* Home */ = {
@@ -198,6 +219,7 @@
 			children = (
 				78947910A44056EA97D499EA /* iOS */,
 				82FF630AE9883DF459FB1108 /* Pods_iVictim.framework */,
+				5C55DAF013E0C39B925CF0EB /* Pods_iVictim7.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +257,8 @@
 			children = (
 				99B0A14E63BEAC39FF22967A /* Pods-iVictim.release.xcconfig */,
 				5BD7607F3B70A398A40C60EB /* Pods-iVictim.debug.xcconfig */,
+				600890E233DA8E5275E5A1CB /* Pods-iVictim7.release.xcconfig */,
+				2000EB8309CA0D9CD5A0868B /* Pods-iVictim7.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -310,6 +334,7 @@
 		D341B35596BA7CD46A81C7B0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				43683FA71D00CD86008F8156 /* Piracy Detection */,
 				43A2293D1D00BA0100E65D6C /* Code Injection */,
 				43A2293A1D00ACE600E65D6C /* Transport Layer Security */,
 				43A229351D00A7D600E65D6C /* SSL Pinning */,
@@ -320,6 +345,9 @@
 				4384DC6A1CFE180400FEAD22 /* Menu */,
 				4CD6C976323ED09751A2A008 /* Main.storyboard */,
 				4384DC751CFE215C00FEAD22 /* MainWireframe.swift */,
+				43683FD61D00D80B008F8156 /* SecurityManagerSwiftWrapper.swift */,
+				43683FA31D00CBDF008F8156 /* SecurityManager.h */,
+				43683FA41D00CBDF008F8156 /* SecurityManager.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -340,6 +368,7 @@
 				6047556011F76A13B8BCFB99 /* Frameworks */,
 				BEBE2C55F5558EA4B2138106 /* Products */,
 				785696DDDBD62B9D4EBC4462 /* Pods */,
+				43683FD51D00D333008F8156 /* iVictim copy-Info.plist */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -535,8 +564,10 @@
 				43BB81791CFEC8D900591292 /* RealmSenstiveDataModel.swift in Sources */,
 				43A229371D00A7EB00E65D6C /* SSLPinningViewController.swift in Sources */,
 				4384DC731CFE181A00FEAD22 /* HomeViewController.swift in Sources */,
+				43683FAC1D00CDC6008F8156 /* PiracyDetectionViewController.swift in Sources */,
 				43BB81771CFEBF2300591292 /* LocalStorageViewController.swift in Sources */,
 				4313B2F41CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld in Sources */,
+				43683FD71D00D80B008F8156 /* SecurityManagerSwiftWrapper.swift in Sources */,
 				4313B3231CFF755800D269FF /* BruteForceViewController.swift in Sources */,
 				4384DC661CFE162C00FEAD22 /* CellMagic.swift in Sources */,
 				43A2293C1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift in Sources */,
@@ -546,6 +577,7 @@
 				43A2293F1D00BA1300E65D6C /* CodeInjectionViewController.swift in Sources */,
 				4384DC7F1CFE219800FEAD22 /* MenuViewController.swift in Sources */,
 				4384DC671CFE162C00FEAD22 /* Storyboard.swift in Sources */,
+				43683FA51D00CBDF008F8156 /* SecurityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,11 +622,12 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "iVictim/Resources/Other-Sources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "iVictim/Application/iVictim-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = iVictim/Application/BridgingHeader.h;
 			};
 			name = Release;
 		};
@@ -676,11 +709,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "iVictim/Resources/Other-Sources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "iVictim/Application/iVictim-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = iVictim/Application/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;

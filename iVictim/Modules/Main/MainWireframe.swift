@@ -30,6 +30,11 @@ final class MainWireframe: BaseWireframe {
 
 extension MainWireframe: MenuViewControllerOutput {
     
+    func presentPiracyDetection() {
+        let view: PiracyDetectionViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
+    }
+    
     func presentCodeInjection() {
         let view: CodeInjectionViewController = storyboard.instantiateViewController()
         navigationController.pushViewController(view, animated: true)

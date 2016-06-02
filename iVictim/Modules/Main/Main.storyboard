@@ -291,6 +291,66 @@
             </objects>
             <point key="canvasLocation" x="853.5" y="1137.5"/>
         </scene>
+        <!--Piracy Detection-->
+        <scene sceneID="jcx-xj-vIr">
+            <objects>
+                <viewController storyboardIdentifier="PiracyDetectionViewController" title="Piracy Detection" id="LdE-wZ-qSN" customClass="PiracyDetectionViewController" customModule="iVictim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="etL-Lh-sMo"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Vl-5W-AZc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hcR-nd-Rch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akB-Gq-j2c">
+                                <rect key="frame" x="117" y="114" width="141" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Fj-jn-jjJ"/>
+                                </constraints>
+                                <state key="normal" title="Check if is in sanbox"/>
+                                <connections>
+                                    <action selector="checkIfIsInSandboxButtonClicked:" destination="LdE-wZ-qSN" eventType="touchUpInside" id="Tr0-za-ll6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyy-Yr-vlH">
+                                <rect key="frame" x="124.5" y="189" width="126" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eds-rb-uDx"/>
+                                </constraints>
+                                <state key="normal" title="Check if jailbroken"/>
+                                <connections>
+                                    <action selector="checkIfJailbrokenButtonClicked:" destination="LdE-wZ-qSN" eventType="touchUpInside" id="ule-ye-X1h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-0P-34b">
+                                <rect key="frame" x="88" y="264" width="198" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sse-MY-xUc"/>
+                                </constraints>
+                                <state key="normal" title="Close app if being debugged"/>
+                                <connections>
+                                    <action selector="checkIfBeingDebugedButtonClicked:" destination="LdE-wZ-qSN" eventType="touchUpInside" id="WBG-mv-Gas"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="akB-Gq-j2c" firstAttribute="centerX" secondItem="hcR-nd-Rch" secondAttribute="centerX" id="COi-F9-g6R"/>
+                            <constraint firstItem="5rw-0P-34b" firstAttribute="centerX" secondItem="Eyy-Yr-vlH" secondAttribute="centerX" id="LvG-37-hf7"/>
+                            <constraint firstItem="akB-Gq-j2c" firstAttribute="top" secondItem="etL-Lh-sMo" secondAttribute="bottom" constant="50" id="OsL-xZ-05O"/>
+                            <constraint firstItem="5rw-0P-34b" firstAttribute="top" secondItem="Eyy-Yr-vlH" secondAttribute="bottom" constant="25" id="UOH-48-bG9"/>
+                            <constraint firstItem="Eyy-Yr-vlH" firstAttribute="top" secondItem="akB-Gq-j2c" secondAttribute="bottom" constant="25" id="s02-gt-vfv"/>
+                            <constraint firstItem="Eyy-Yr-vlH" firstAttribute="centerX" secondItem="akB-Gq-j2c" secondAttribute="centerX" id="wBA-j7-1KZ"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QbQ-aj-BFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.5" y="1863.5"/>
+        </scene>
         <!--Brute Force-->
         <scene sceneID="yAJ-Zy-Gcf">
             <objects>
@@ -402,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yy3-QM-G4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370.5" y="1891.5"/>
+            <point key="canvasLocation" x="517.5" y="1876.5"/>
         </scene>
         <!--Local Storage-->
         <scene sceneID="GXp-24-aQz">

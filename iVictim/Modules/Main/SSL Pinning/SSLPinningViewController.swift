@@ -23,7 +23,7 @@ final  class SSLPinningViewController: UIViewController, NSURLSessionDelegate, N
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+
             //let pathToCert = NSBundle.mainBundle().pathForResource(githubCert, ofType: "cer")
             // print(pathToCert)
             self.configureURLSession()
