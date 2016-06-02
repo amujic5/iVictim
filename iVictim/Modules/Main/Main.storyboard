@@ -678,6 +678,110 @@
             </objects>
             <point key="canvasLocation" x="1320.5" y="380.5"/>
         </scene>
+        <!--Code injection-->
+        <scene sceneID="StY-T8-dLQ">
+            <objects>
+                <viewController storyboardIdentifier="CodeInjectionViewController" title="Code injection" id="qEA-2M-zri" customClass="CodeInjectionViewController" customModule="iVictim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mv2-uh-NMD"/>
+                        <viewControllerLayoutGuide type="bottom" id="mN7-3s-gx4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vh2-NA-1nV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs6-5v-PZY">
+                                <rect key="frame" x="15" y="84" width="345" height="122"/>
+                                <string key="text">This is example how can code be injeceted into the app. Here, we are using webView component. We will see how can javascript code be easily injected here. Type into text filed text that will be loaded into webview (usually that data comes from server).</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f06-Do-6jF">
+                                <rect key="frame" x="15" y="221" width="345" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qEA-2M-zri" id="WVY-k5-xcz"/>
+                                </connections>
+                            </textField>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41Z-iu-12s">
+                                <rect key="frame" x="5" y="331" width="365" height="218"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gt-FA-qbk">
+                                <rect key="frame" x="49" y="607" width="89" height="30"/>
+                                <state key="normal" title="Open pop up"/>
+                                <connections>
+                                    <action selector="popUpButtonClicked:" destination="qEA-2M-zri" eventType="touchUpInside" id="Evr-uX-hMB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-0c-r5H">
+                                <rect key="frame" x="153" y="607" width="68" height="30"/>
+                                <state key="normal" title="Send mail"/>
+                                <connections>
+                                    <action selector="sendMailButtonClicked:" destination="qEA-2M-zri" eventType="touchUpInside" id="7Z9-QT-kvB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihp-P6-2bo">
+                                <rect key="frame" x="236" y="607" width="83" height="30"/>
+                                <state key="normal" title="Call number"/>
+                                <connections>
+                                    <action selector="callNumberButtonClicked:" destination="qEA-2M-zri" eventType="touchUpInside" id="L3a-EU-Gq1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose template" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlB-Co-SUJ">
+                                <rect key="frame" x="122" y="569" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aaf-bb-bDY">
+                                <rect key="frame" x="109" y="261" width="157" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8gT-bq-6Hs"/>
+                                </constraints>
+                                <state key="normal" title="Load text into webview"/>
+                                <connections>
+                                    <action selector="loadTextIntoWebViewButtonClicked:" destination="qEA-2M-zri" eventType="touchUpInside" id="JjU-50-8V0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qs6-5v-PZY" firstAttribute="leading" secondItem="Vh2-NA-1nV" secondAttribute="leading" constant="15" id="6HI-GI-IGL"/>
+                            <constraint firstItem="JlB-Co-SUJ" firstAttribute="centerX" secondItem="Vh2-NA-1nV" secondAttribute="centerX" id="7Bc-VU-yMu"/>
+                            <constraint firstItem="f06-Do-6jF" firstAttribute="top" secondItem="Qs6-5v-PZY" secondAttribute="bottom" constant="15" id="89b-km-aUe"/>
+                            <constraint firstItem="Aaf-bb-bDY" firstAttribute="top" secondItem="f06-Do-6jF" secondAttribute="bottom" constant="10" id="9G0-cP-dZQ"/>
+                            <constraint firstItem="f06-Do-6jF" firstAttribute="leading" secondItem="Vh2-NA-1nV" secondAttribute="leading" constant="15" id="A4Z-6r-oxk"/>
+                            <constraint firstItem="6Gt-FA-qbk" firstAttribute="centerY" secondItem="7gi-0c-r5H" secondAttribute="centerY" id="GLD-YH-BpT"/>
+                            <constraint firstItem="41Z-iu-12s" firstAttribute="leading" secondItem="Vh2-NA-1nV" secondAttribute="leading" constant="5" id="H79-IT-wN2"/>
+                            <constraint firstAttribute="trailing" secondItem="41Z-iu-12s" secondAttribute="trailing" constant="5" id="JtE-tP-WEk"/>
+                            <constraint firstItem="JlB-Co-SUJ" firstAttribute="top" secondItem="41Z-iu-12s" secondAttribute="bottom" constant="20" id="L8m-8l-mgO"/>
+                            <constraint firstItem="41Z-iu-12s" firstAttribute="top" secondItem="Aaf-bb-bDY" secondAttribute="bottom" constant="20" id="QuJ-jZ-0pK"/>
+                            <constraint firstItem="ihp-P6-2bo" firstAttribute="leading" secondItem="7gi-0c-r5H" secondAttribute="trailing" constant="15" id="Uuh-h7-R3I"/>
+                            <constraint firstItem="7gi-0c-r5H" firstAttribute="centerX" secondItem="Vh2-NA-1nV" secondAttribute="centerX" id="X2L-Xp-VVl"/>
+                            <constraint firstItem="7gi-0c-r5H" firstAttribute="leading" secondItem="6Gt-FA-qbk" secondAttribute="trailing" constant="15" id="dNd-Gl-420"/>
+                            <constraint firstItem="ihp-P6-2bo" firstAttribute="top" secondItem="JlB-Co-SUJ" secondAttribute="bottom" constant="17" id="dl5-YN-S56"/>
+                            <constraint firstItem="ihp-P6-2bo" firstAttribute="centerY" secondItem="7gi-0c-r5H" secondAttribute="centerY" id="eUj-A2-rca"/>
+                            <constraint firstItem="Qs6-5v-PZY" firstAttribute="top" secondItem="Mv2-uh-NMD" secondAttribute="bottom" constant="20" id="hMb-bE-m3p"/>
+                            <constraint firstAttribute="trailing" secondItem="Qs6-5v-PZY" secondAttribute="trailing" constant="15" id="nyU-Ou-FWW"/>
+                            <constraint firstAttribute="trailing" secondItem="f06-Do-6jF" secondAttribute="trailing" constant="15" id="wTc-If-OUs"/>
+                            <constraint firstItem="mN7-3s-gx4" firstAttribute="top" secondItem="7gi-0c-r5H" secondAttribute="bottom" constant="30" id="yWy-33-5R1"/>
+                            <constraint firstItem="Aaf-bb-bDY" firstAttribute="centerX" secondItem="Vh2-NA-1nV" secondAttribute="centerX" id="zbu-2J-WAh"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="textField" destination="f06-Do-6jF" id="B90-Kp-sVI"/>
+                        <outlet property="webView" destination="41Z-iu-12s" id="DeL-qE-5xx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbN-rO-Tnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724.5" y="380.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_view_headline" width="17" height="14"/>

@@ -30,6 +30,11 @@ final class MainWireframe: BaseWireframe {
 
 extension MainWireframe: MenuViewControllerOutput {
     
+    func presentCodeInjection() {
+        let view: CodeInjectionViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
+    }
+    
     func presentTransportLayerSecurity() {
         let view: TransportLayerSecurityViewController = storyboard.instantiateViewController()
         navigationController.pushViewController(view, animated: true)

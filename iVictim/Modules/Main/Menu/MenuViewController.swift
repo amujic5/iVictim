@@ -16,6 +16,7 @@ protocol MenuViewControllerOutput {
     func presentBruteForce()
     func presentSSLPinning()
     func presentTransportLayerSecurity()
+    func presentCodeInjection()
 }
 
 final class MenuViewController: UIViewController {
@@ -65,6 +66,8 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             output.presentSSLPinning()
         case .TransportLayerSecurity:
             output.presentTransportLayerSecurity()
+        case .CodeInjection:
+            output.presentCodeInjection()
         }
         
     }
@@ -76,8 +79,16 @@ enum MenuItem: String {
     case BruteForce = "Brute Force"
     case TransportLayerSecurity = "Transport Layer Security"
     case SSLPinning = "SSL Pinning"
+    case CodeInjection = "Code injection"
     
     static var items: [MenuItem] {
-        return [MenuItem.BadLogin, MenuItem.LocalStorage, MenuItem.BruteForce, MenuItem.TransportLayerSecurity, MenuItem.SSLPinning]
+        return [
+            MenuItem.BadLogin,
+            MenuItem.LocalStorage,
+            MenuItem.BruteForce,
+            MenuItem.TransportLayerSecurity,
+            MenuItem.SSLPinning,
+            MenuItem.CodeInjection
+        ]
     }
 }
