@@ -1,23 +1,12 @@
 //
-//  WireframeInterface.swift
+//  BaseWireframe.swift
 //  iVictim
 //
-//  Created by Azzaro Mujic on 5/31/16
-//  Copyright (c) 2016 . All rights reserved.
+//  Created by Azzaro Mujic on 02/06/16.
+//
 //
 
-import Foundation
 import UIKit
-
-// MARK: - Wireframe interface -
-protocol WireframeInterface {
-    
-}
-
-// MARK: - Wireframe interface default implementation -
-extension WireframeInterface {
-}
-
 
 class BaseWireframe {
     
