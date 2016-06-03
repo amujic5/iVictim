@@ -14,7 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let imageView = UIImageView()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        imageView.image = UIImage(named: "screen_image")
         
         window = UIWindow()
         
@@ -26,6 +30,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainWireframe.showHomeScreen()
         
         return true
+    }
+    
+    func applicationDidEnterBackground(application: UIApplication) {
+        if let value = NSUserDefaults.standardUserDefaults().objectForKey("hideWindow") as? Bool where value {
+            if let window = window {
+                window.addSubview(imageView)
+                imageView.frame = window.bounds
+            }
+        }
+    }
+    
+    func applicationWillEnterForeground(application: UIApplication) {
+        imageView.removeFromSuperview()
     }
 
     // MARK: - Core Data stack

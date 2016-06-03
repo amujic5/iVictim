@@ -19,6 +19,7 @@ protocol HomeViewControllerOutput {
     func presentCodeInjection()
     func presentPiracyDetection()
     func presentPasteboard()
+    func presentScreenshot()
 }
 
 final class HomeViewController: UIViewController {
@@ -51,6 +52,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         switch MenuItem.items[indexPath.row] {
         case .BadLogin:
             output.presentBadLogIn()
@@ -68,6 +70,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             output.presentPiracyDetection()
         case .Pasteboard:
             output.presentPasteboard()
+        case .Screenshot:
+            output.presentScreenshot()
         }
         
     }
@@ -81,7 +85,8 @@ enum MenuItem: String {
     case SSLPinning = "SSL Pinning"
     case CodeInjection = "Code injection"
     case PiracyDetection = "Piracy detection"
-    case Pasteboard = "Pasteboard"
+    case Pasteboard = "Pasteboard problem"
+    case Screenshot = "Screenshot problem"
     
     static var items: [MenuItem] {
         return [
@@ -92,7 +97,8 @@ enum MenuItem: String {
             MenuItem.SSLPinning,
             MenuItem.CodeInjection,
             MenuItem.PiracyDetection,
-            MenuItem.Pasteboard
+            MenuItem.Pasteboard,
+            MenuItem.Screenshot
         ]
     }
 }

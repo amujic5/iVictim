@@ -23,6 +23,11 @@ final class MainWireframe: BaseWireframe {
 
 extension MainWireframe: HomeViewControllerOutput {
     
+    func presentScreenshot() {
+        let view: ScreenshootViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
+    }
+    
     func presentPasteboard() {
         let view: PasteboardViewController = storyboard.instantiateViewController()
         navigationController.pushViewController(view, animated: true)

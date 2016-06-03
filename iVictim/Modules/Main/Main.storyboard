@@ -384,6 +384,85 @@
             </objects>
             <point key="canvasLocation" x="427.5" y="2731.5"/>
         </scene>
+        <!--Screenshot problem-->
+        <scene sceneID="Jbl-Pb-jzd">
+            <objects>
+                <viewController storyboardIdentifier="ScreenshootViewController" title="Screenshot problem" id="CV1-Qn-MoH" customClass="ScreenshootViewController" customModule="iVictim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Bv-Kh-Mf4"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ym-Vv-brd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nYV-N0-P8T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUc-aU-PSD">
+                                <rect key="frame" x="17" y="81" width="341" height="203"/>
+                                <string key="text">Imagine this scenario. It is been asked for security question/answer. Just after you enter security you put your app in the background. Once you do that, app will screenshot a screen (because performace) and that photo will be easily reachable. Try going into the background and find that photo. After that, you can turn on switcher below so the app will hide information just before screenshot. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your dog name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIj-sS-Hgd">
+                                <rect key="frame" x="17" y="347" width="185" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-du-OuV">
+                                <rect key="frame" x="17" y="376" width="328" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide screen before going into background mode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO1-KW-icS">
+                                <rect key="frame" x="17" y="454" width="259" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZGn-K9-iDT">
+                                <rect key="frame" x="296" y="459" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switcherChangedValue:" destination="CV1-Qn-MoH" eventType="valueChanged" id="MNO-nP-mfB"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hIj-sS-Hgd" firstAttribute="leading" secondItem="XUc-aU-PSD" secondAttribute="leading" id="1JM-Zt-eiq"/>
+                            <constraint firstItem="XUc-aU-PSD" firstAttribute="top" secondItem="9Bv-Kh-Mf4" secondAttribute="bottom" constant="17" id="6bc-oP-ehR"/>
+                            <constraint firstAttribute="trailing" secondItem="Sh8-du-OuV" secondAttribute="trailing" constant="30" id="6hx-Lf-YAy"/>
+                            <constraint firstItem="gO1-KW-icS" firstAttribute="top" secondItem="Sh8-du-OuV" secondAttribute="bottom" constant="48" id="8Nb-Ir-vWD"/>
+                            <constraint firstItem="gO1-KW-icS" firstAttribute="leading" secondItem="XUc-aU-PSD" secondAttribute="leading" id="9YH-7D-HwG"/>
+                            <constraint firstItem="gO1-KW-icS" firstAttribute="trailing" secondItem="XUc-aU-PSD" secondAttribute="trailing" id="CGx-3h-rBp"/>
+                            <constraint firstItem="ZGn-K9-iDT" firstAttribute="trailing" secondItem="Sh8-du-OuV" secondAttribute="trailing" id="HID-WY-Ted"/>
+                            <constraint firstItem="Sh8-du-OuV" firstAttribute="top" secondItem="hIj-sS-Hgd" secondAttribute="bottom" constant="8" id="Jho-8u-i7u"/>
+                            <constraint firstItem="gO1-KW-icS" firstAttribute="leading" secondItem="hIj-sS-Hgd" secondAttribute="leading" id="NeW-Pn-hEQ"/>
+                            <constraint firstItem="gO1-KW-icS" firstAttribute="trailing" secondItem="XUc-aU-PSD" secondAttribute="trailing" id="TVK-Nd-FgX"/>
+                            <constraint firstItem="ZGn-K9-iDT" firstAttribute="leading" secondItem="gO1-KW-icS" secondAttribute="trailing" constant="20" id="lLC-QC-sgf"/>
+                            <constraint firstItem="gO1-KW-icS" firstAttribute="leading" secondItem="XUc-aU-PSD" secondAttribute="leading" id="nIt-jl-YwH"/>
+                            <constraint firstItem="Sh8-du-OuV" firstAttribute="leading" secondItem="hIj-sS-Hgd" secondAttribute="leading" id="ofB-QX-Zgu"/>
+                            <constraint firstItem="hIj-sS-Hgd" firstAttribute="top" secondItem="XUc-aU-PSD" secondAttribute="bottom" constant="63" id="tBe-1F-Ckv"/>
+                            <constraint firstItem="XUc-aU-PSD" firstAttribute="leading" secondItem="nYV-N0-P8T" secondAttribute="leading" constant="17" id="tWX-eT-JmW"/>
+                            <constraint firstItem="ZGn-K9-iDT" firstAttribute="centerY" secondItem="gO1-KW-icS" secondAttribute="centerY" id="tc0-6O-zrC"/>
+                            <constraint firstAttribute="trailing" secondItem="XUc-aU-PSD" secondAttribute="trailing" constant="17" id="xvl-bJ-j9Y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9YH-7D-HwG"/>
+                                <exclude reference="CGx-3h-rBp"/>
+                                <exclude reference="NeW-Pn-hEQ"/>
+                                <exclude reference="TVK-Nd-FgX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydi-yL-0mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475.5" y="3475.5"/>
+        </scene>
         <!--Local Storage-->
         <scene sceneID="GXp-24-aQz">
             <objects>
