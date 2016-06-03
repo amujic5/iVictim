@@ -311,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yy3-QM-G4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="517.5" y="1876.5"/>
+            <point key="canvasLocation" x="370.5" y="1935.5"/>
         </scene>
         <!--Pasteboard-->
         <scene sceneID="L0L-W7-Pwf">
@@ -354,7 +354,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="WO5-b2-xqq"/>
                                 </constraints>
-                                <string key="text">Copy text from here or copy form another app and press show copied text. You will see that information copied to clipboard can be easily found.</string>
+                                <string key="text">Copy text from here or copy from another app and press show copied text. You will see that information is copied to clipboard and can be easily found.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -502,7 +502,7 @@
                                     <outlet property="delegate" destination="usy-70-GrT" id="Cc2-U9-c5b"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This part is about insecure data storage. Wire something into the box and save using differenet option." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R21-Zu-qbC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This part is about insecure data storage. Write something into the box and save using different option." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R21-Zu-qbC">
                                 <rect key="frame" x="20" y="40" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -681,7 +681,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ard-wz-1YR">
                                 <rect key="frame" x="15" y="99" width="345" height="101.5"/>
-                                <string key="text">From iOS9 default transport layer security will not allow http requests. It will only allow https requests. However, this option can be easilt modifited. By cliking buttons check http and http requests.</string>
+                                <string key="text">From iOS9 default transport layer security will not allow http requests. It will only allow https requests. However, this option can be easily be modifited. By cliking buttons check http and http requests.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -765,7 +765,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs6-5v-PZY">
                                 <rect key="frame" x="15" y="84" width="345" height="122"/>
-                                <string key="text">This is example how can code be injeceted into the app. Here, we are using webView component. We will see how can javascript code be easily injected here. Type into text filed text that will be loaded into webview (usually that data comes from server).</string>
+                                <string key="text">This is example how can code be injeceted into the app. Here, we are using webView component. We will see how can javascript code be easily injected here. Type into text field text that will be loaded into webview (usually that data comes from server).</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
