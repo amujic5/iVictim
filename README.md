@@ -1,5 +1,14 @@
 # iVictim #
 
+.left {
+float: left;
+width: 50%;
+}
+.right {
+float: right;
+width: 50%;
+}
+
 ### Home
 <h3 align="left"> 
 <img src="assets/home.png" width="250" height="444"/> 
