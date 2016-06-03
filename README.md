@@ -11,7 +11,7 @@ werewr
 ewr
 ewrewrwerewrwerewr
 ewrwerwerwerwerwewekrwekrewrwerwekr: 
-![alt text](assets/home.png "Logo Title Text 1")
+![alt text](assets/home.png width="250" height="444"  "Logo Title Text 1")
 
 
 ### Bad Log In
