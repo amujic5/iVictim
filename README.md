@@ -5,7 +5,12 @@
 <img src="assets/home.png" width="250" height="444"/> 
 </h3> 
 
-Inline-style: 
+Inline-stylewerkwerkewrwe
+rwerewr
+werewr
+ewr
+ewrewrwerewrwerewr
+ewrwerwerwerwerwewekrwekrewrwerwekr: 
 ![alt text](assets/home.png "Logo Title Text 1")
 
 
