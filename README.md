@@ -3,10 +3,10 @@
 ### Home
 <h3 align="left"> 
 <img src="assets/home.png" width="250" height="444"/> 
-fnsdlflsdkfmkldsmfkldskfmsdkmfsd
-fsdfsdfkmdslkfmsd
-fsdmfksdfmsdfmsld
 </h3> 
+
+![optional captisfsdkfdsl;fsd;lfdslfdskf;lsdkf;lsdfksd;lfklsdkf;lksd;lfdskf;lsdkf;ldskf;lsdkf;lksdf;ksd;fk;sdkf;lsdkfksdf;sdlkf;ksd;fksd;flksd;flon text](fassets/home.png)
+
 
 ### Bad Log In
 <h3 align="left">
