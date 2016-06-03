@@ -8,7 +8,7 @@
 
 ### Bad Log In
 <h3 align="left">
-<img src="bad_log_in/home.png" width="250" height="444"/>
+<img src="assets/bad_log_in.png" width="250" height="444"/>
 </h3>
 
 
