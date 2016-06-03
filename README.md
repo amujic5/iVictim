@@ -1,8 +1,8 @@
 # iVictim #
 
 ### Home
-<h3 align="center">
-<img src="assets/home.png" alt="home screen" width="168" height="222"/>
+<h3 align="left">
+<img src="assets/home.png" width="250" height="444"/>
 </h3>
 
 
