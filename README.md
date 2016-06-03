@@ -5,15 +5,6 @@
 <img src="assets/home.png" width="250" height="444"/> 
 </h3> 
 
-Inline-stylewerkwerkewrwe
-rwerewr
-werewr
-ewr
-ewrewrwerewrwerewr
-ewrwerwerwerwerwewekrwekrewrwerwekr: 
-![alt text](assets/home.png width="250" height="444"  "Logo Title Text 1")
-
-
 ### Bad Log In
 <h3 align="left">
 <img src="assets/bad_log_in.png" width="250" height="444"/>
