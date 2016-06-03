@@ -3,12 +3,7 @@
 ### Home
 <h3 align="left">
 <img src="assets/home.png" width="250" height="444"/>
-</h3>
-
-<div class="row">
-    <div class="col-md-4"><img src="assets/home.png" width="250" height="444"/></div>
-    <div class="col-md-4">This is test</div>
-</div>
+</h3> | I Am text to right
 
 
 ### Bad Log In
