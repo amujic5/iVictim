@@ -10,7 +10,7 @@
 
 import UIKit
 
-protocol MenuViewControllerOutput {
+protocol HomeViewControllerOutput {
     func presentBadLogIn()
     func presentLocalStorage()
     func presentBruteForce()
@@ -20,9 +20,9 @@ protocol MenuViewControllerOutput {
     func presentPiracyDetection()
 }
 
-final class MenuViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
-    var output: MenuViewControllerOutput!
+    var output: HomeViewControllerOutput!
     
     // MARK: - View lifecycle -
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ final class MenuViewController: UIViewController {
 }
 
 
-extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

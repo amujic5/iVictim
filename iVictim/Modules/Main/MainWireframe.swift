@@ -16,19 +16,12 @@ final class MainWireframe: BaseWireframe {
         let view: HomeViewController = storyboard.instantiateViewController()
         view.output = self
         
-        let _ = view.view
-        
-        if let menuView = view.menuViewController {
-            menuView.output = self
-        }
-        
-        
         navigationController.pushViewController(view, animated: true)
     }
 }
 
 
-extension MainWireframe: MenuViewControllerOutput {
+extension MainWireframe: HomeViewControllerOutput {
     
     func presentPiracyDetection() {
         let view: PiracyDetectionViewController = storyboard.instantiateViewController()
@@ -65,8 +58,4 @@ extension MainWireframe: MenuViewControllerOutput {
         let view: BruteForceViewController = storyboard.instantiateViewController()
         navigationController.pushViewController(view, animated: true)
     }
-}
-
-extension MainWireframe: HomeViewControllerOutput {
-    
 }
