@@ -5,7 +5,8 @@
 <img src="assets/home.png" width="250" height="444"/> 
 </h3> 
 
-![optional captisfsdkfdsl;fsd;lfdslfdskf;lsdkf;lsdfksd;lfklsdkf;lksd;lfdskf;lsdkf;ldskf;lsdkf;lksdf;ksd;fk;sdkf;lsdkfksdf;sdlkf;ksd;fksd;flksd;flon text](fassets/home.png)
+![optional caption text](assets/home.png)
+
 
 
 ### Bad Log In
