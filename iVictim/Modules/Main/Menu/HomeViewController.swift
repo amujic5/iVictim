@@ -18,6 +18,7 @@ protocol HomeViewControllerOutput {
     func presentTransportLayerSecurity()
     func presentCodeInjection()
     func presentPiracyDetection()
+    func presentPasteboard()
 }
 
 final class HomeViewController: UIViewController {
@@ -65,6 +66,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             output.presentCodeInjection()
         case .PiracyDetection:
             output.presentPiracyDetection()
+        case .Pasteboard:
+            output.presentPasteboard()
         }
         
     }
@@ -78,6 +81,7 @@ enum MenuItem: String {
     case SSLPinning = "SSL Pinning"
     case CodeInjection = "Code injection"
     case PiracyDetection = "Piracy detection"
+    case Pasteboard = "Pasteboard"
     
     static var items: [MenuItem] {
         return [
@@ -87,7 +91,8 @@ enum MenuItem: String {
             MenuItem.TransportLayerSecurity,
             MenuItem.SSLPinning,
             MenuItem.CodeInjection,
-            MenuItem.PiracyDetection
+            MenuItem.PiracyDetection,
+            MenuItem.Pasteboard
         ]
     }
 }

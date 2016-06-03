@@ -23,6 +23,11 @@ final class MainWireframe: BaseWireframe {
 
 extension MainWireframe: HomeViewControllerOutput {
     
+    func presentPasteboard() {
+        let view: PasteboardViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
+    }
+    
     func presentPiracyDetection() {
         let view: PiracyDetectionViewController = storyboard.instantiateViewController()
         navigationController.pushViewController(view, animated: true)
@@ -50,8 +55,8 @@ extension MainWireframe: HomeViewControllerOutput {
     }
     
     func presentLocalStorage() {
-        let localStorage: LocalStorageViewController = storyboard.instantiateViewController()
-        navigationController.pushViewController(localStorage, animated: true)
+        let view: LocalStorageViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
     }
     
     func presentBruteForce() {

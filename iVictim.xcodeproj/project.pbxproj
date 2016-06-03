@@ -12,6 +12,7 @@
 		4313B2FE1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B2FC1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift */; };
 		4313B2FF1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B2FD1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift */; };
 		4313B3231CFF755800D269FF /* BruteForceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B3221CFF755800D269FF /* BruteForceViewController.swift */; };
+		434F7C4B1D02155300951801 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F7C4A1D02155300951801 /* PasteboardViewController.swift */; };
 		43683FA01D00C714008F8156 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683F9F1D00C714008F8156 /* BaseWireframe.swift */; };
 		43683FA51D00CBDF008F8156 /* SecurityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43683FA41D00CBDF008F8156 /* SecurityManager.m */; };
 		43683FAC1D00CDC6008F8156 /* PiracyDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683FAB1D00CDC6008F8156 /* PiracyDetectionViewController.swift */; };
@@ -54,6 +55,7 @@
 		4313B2FC1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataSensitiveModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4313B2FD1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataSensitiveModel.swift; sourceTree = "<group>"; };
 		4313B3221CFF755800D269FF /* BruteForceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BruteForceViewController.swift; sourceTree = "<group>"; };
+		434F7C4A1D02155300951801 /* PasteboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
 		43683F9F1D00C714008F8156 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		43683FA31D00CBDF008F8156 /* SecurityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityManager.h; sourceTree = "<group>"; };
 		43683FA41D00CBDF008F8156 /* SecurityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityManager.m; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 				4313B3221CFF755800D269FF /* BruteForceViewController.swift */,
 			);
 			path = "Bruce Force";
+			sourceTree = "<group>";
+		};
+		434F7C491D02154100951801 /* Pasteboard */ = {
+			isa = PBXGroup;
+			children = (
+				434F7C4A1D02155300951801 /* PasteboardViewController.swift */,
+			);
+			path = Pasteboard;
 			sourceTree = "<group>";
 		};
 		43683FA71D00CD86008F8156 /* Piracy Detection */ = {
@@ -325,6 +335,7 @@
 		D341B35596BA7CD46A81C7B0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				434F7C491D02154100951801 /* Pasteboard */,
 				43683FA71D00CD86008F8156 /* Piracy Detection */,
 				43A2293D1D00BA0100E65D6C /* Code Injection */,
 				43A2293A1D00ACE600E65D6C /* Transport Layer Security */,
@@ -563,6 +574,7 @@
 				4313B2FE1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift in Sources */,
 				4384DC831CFE2CED00FEAD22 /* BadLogInViewController.swift in Sources */,
 				43683FA01D00C714008F8156 /* BaseWireframe.swift in Sources */,
+				434F7C4B1D02155300951801 /* PasteboardViewController.swift in Sources */,
 				43A2293F1D00BA1300E65D6C /* CodeInjectionViewController.swift in Sources */,
 				4384DC7F1CFE219800FEAD22 /* HomeViewController.swift in Sources */,
 				4384DC671CFE162C00FEAD22 /* Storyboard.swift in Sources */,
