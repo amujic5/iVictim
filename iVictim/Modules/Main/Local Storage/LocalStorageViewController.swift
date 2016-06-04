@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Locksmith
 import CoreData
 
 final class LocalStorageViewController: UIViewController {
@@ -17,6 +16,7 @@ final class LocalStorageViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -70,20 +70,12 @@ final class LocalStorageViewController: UIViewController {
             }
             
         case .Keychain:
-            let dictionary = Locksmith.loadDataForUserAccount("myUserAccount")
-            print(dictionary)
-            try! Locksmith.updateData([keyForStorage: textToSave], forUserAccount: "myUserAccount")
-        case .Realm:
-            var realmModel: RealmSensitiveDataModel
-            if let realmSensitiveDataModel = RealmSensitiveDataModel.objectForKey(keyForStorage) {
-                realmModel = realmSensitiveDataModel
-                print("old data: \(realmModel.data)")
-            } else  {
-                realmModel = RealmSensitiveDataModel()
-                realmModel.updateKey(keyForStorage)
+            if let oldValue = KeychainWrapper.standardKeychainAccess().stringForKey(keyForStorage) {
+               print("old value in keychain: \(oldValue)")
             }
-            realmModel.updateData(textToSave)
-            print("new data: \(realmModel.data)")
+            
+            let saveSuccessful: Bool = KeychainWrapper.standardKeychainAccess().setString(textToSave, forKey: keyForStorage)
+            print("save \(textToSave) in keychain = \(saveSuccessful)")
         }
         
         
@@ -118,15 +110,23 @@ extension LocalStorageViewController: UITableViewDelegate, UITableViewDataSource
     }
 }
 
+extension LocalStorageViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}
+
 enum LocalStorageType: String {
     
     case NSUserDefaults
     case Plist
     case CoreData
     case Keychain
-    case Realm
     
     static var items: [LocalStorageType] {
-        return [LocalStorageType.NSUserDefaults, LocalStorageType.Plist, LocalStorageType.CoreData, LocalStorageType.Keychain, LocalStorageType.Realm]
+        return [LocalStorageType.NSUserDefaults, LocalStorageType.Plist, LocalStorageType.CoreData, LocalStorageType.Keychain]
     }
 }

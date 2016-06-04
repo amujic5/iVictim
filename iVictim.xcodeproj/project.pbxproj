@@ -14,6 +14,9 @@
 		4313B3231CFF755800D269FF /* BruteForceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B3221CFF755800D269FF /* BruteForceViewController.swift */; };
 		434F7C4B1D02155300951801 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F7C4A1D02155300951801 /* PasteboardViewController.swift */; };
 		434F7C4E1D021E2A00951801 /* ScreenshootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F7C4D1D021E2A00951801 /* ScreenshootViewController.swift */; };
+		434F7C5D1D02CCE500951801 /* KeychainOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F7C581D02CCE500951801 /* KeychainOptions.swift */; };
+		434F7C5E1D02CCE500951801 /* KeychainWrapper+Experimental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F7C591D02CCE500951801 /* KeychainWrapper+Experimental.swift */; };
+		434F7C5F1D02CCE500951801 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F7C5A1D02CCE500951801 /* KeychainWrapper.swift */; };
 		43683FA01D00C714008F8156 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683F9F1D00C714008F8156 /* BaseWireframe.swift */; };
 		43683FA51D00CBDF008F8156 /* SecurityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43683FA41D00CBDF008F8156 /* SecurityManager.m */; };
 		43683FAC1D00CDC6008F8156 /* PiracyDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683FAB1D00CDC6008F8156 /* PiracyDetectionViewController.swift */; };
@@ -29,7 +32,6 @@
 		43A2293C1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A2293B1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift */; };
 		43A2293F1D00BA1300E65D6C /* CodeInjectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A2293E1D00BA1300E65D6C /* CodeInjectionViewController.swift */; };
 		43BB81771CFEBF2300591292 /* LocalStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */; };
-		43BB81791CFEC8D900591292 /* RealmSenstiveDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */; };
 		7904D1AAA59E795537141296 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2555CE71D43A4EFADDF0FE2 /* Constants.swift */; };
 		A3C2B5F5D4102FFCAE13A24B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2163AF44E425907F735CE6 /* Foundation.framework */; };
 		B8F9283E97CFEA34A1992C73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB033CD2552E70BD97257501 /* Images.xcassets */; };
@@ -58,6 +60,10 @@
 		4313B3221CFF755800D269FF /* BruteForceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BruteForceViewController.swift; sourceTree = "<group>"; };
 		434F7C4A1D02155300951801 /* PasteboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
 		434F7C4D1D021E2A00951801 /* ScreenshootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshootViewController.swift; sourceTree = "<group>"; };
+		434F7C581D02CCE500951801 /* KeychainOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainOptions.swift; sourceTree = "<group>"; };
+		434F7C591D02CCE500951801 /* KeychainWrapper+Experimental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainWrapper+Experimental.swift"; sourceTree = "<group>"; };
+		434F7C5A1D02CCE500951801 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		434F7C5B1D02CCE500951801 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftKeychainWrapper.h; sourceTree = "<group>"; };
 		43683F9F1D00C714008F8156 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		43683FA31D00CBDF008F8156 /* SecurityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityManager.h; sourceTree = "<group>"; };
 		43683FA41D00CBDF008F8156 /* SecurityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityManager.m; sourceTree = "<group>"; };
@@ -76,7 +82,6 @@
 		43A2293B1D00AD1100E65D6C /* TransportLayerSecurityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportLayerSecurityViewController.swift; sourceTree = "<group>"; };
 		43A2293E1D00BA1300E65D6C /* CodeInjectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeInjectionViewController.swift; sourceTree = "<group>"; };
 		43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorageViewController.swift; sourceTree = "<group>"; };
-		43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSenstiveDataModel.swift; sourceTree = "<group>"; };
 		4CD6C976323ED09751A2A008 /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5BD7607F3B70A398A40C60EB /* Pods-iVictim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVictim.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVictim/Pods-iVictim.debug.xcconfig"; sourceTree = "<group>"; };
 		5C55DAF013E0C39B925CF0EB /* Pods_iVictim7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iVictim7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +158,17 @@
 			path = Screenshoot;
 			sourceTree = "<group>";
 		};
+		434F7C561D02CCE500951801 /* SwiftKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				434F7C581D02CCE500951801 /* KeychainOptions.swift */,
+				434F7C591D02CCE500951801 /* KeychainWrapper+Experimental.swift */,
+				434F7C5A1D02CCE500951801 /* KeychainWrapper.swift */,
+				434F7C5B1D02CCE500951801 /* SwiftKeychainWrapper.h */,
+			);
+			path = SwiftKeychainWrapper;
+			sourceTree = "<group>";
+		};
 		43683FA71D00CD86008F8156 /* Piracy Detection */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				43BB81761CFEBF2300591292 /* LocalStorageViewController.swift */,
-				43BB81781CFEC8D900591292 /* RealmSenstiveDataModel.swift */,
 				4313B2F21CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld */,
 				4313B2FC1CFF6B1F00D269FF /* CoreDataSensitiveModel+CoreDataProperties.swift */,
 				4313B2FD1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift */,
@@ -357,6 +372,7 @@
 				4384DC6A1CFE180400FEAD22 /* Home */,
 				4CD6C976323ED09751A2A008 /* Main.storyboard */,
 				4384DC751CFE215C00FEAD22 /* MainWireframe.swift */,
+				434F7C561D02CCE500951801 /* SwiftKeychainWrapper */,
 				43683FD61D00D80B008F8156 /* SecurityManagerSwiftWrapper.swift */,
 				43683FA31D00CBDF008F8156 /* SecurityManager.h */,
 				43683FA41D00CBDF008F8156 /* SecurityManager.m */,
@@ -571,10 +587,12 @@
 				002B065261A2EB77B375F2A3 /* AppDelegate.swift in Sources */,
 				4313B2FF1CFF6B1F00D269FF /* CoreDataSensitiveModel.swift in Sources */,
 				7904D1AAA59E795537141296 /* Constants.swift in Sources */,
+				434F7C5D1D02CCE500951801 /* KeychainOptions.swift in Sources */,
+				434F7C5F1D02CCE500951801 /* KeychainWrapper.swift in Sources */,
 				4384DC681CFE162C00FEAD22 /* View.swift in Sources */,
 				4384DC761CFE215C00FEAD22 /* MainWireframe.swift in Sources */,
-				43BB81791CFEC8D900591292 /* RealmSenstiveDataModel.swift in Sources */,
 				43A229371D00A7EB00E65D6C /* SSLPinningViewController.swift in Sources */,
+				434F7C5E1D02CCE500951801 /* KeychainWrapper+Experimental.swift in Sources */,
 				43683FAC1D00CDC6008F8156 /* PiracyDetectionViewController.swift in Sources */,
 				43BB81771CFEBF2300591292 /* LocalStorageViewController.swift in Sources */,
 				4313B2F41CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld in Sources */,
@@ -635,7 +653,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "iVictim/Resources/Other-Sources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -722,7 +740,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "iVictim/Resources/Other-Sources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CryptoSwift
 
 class BruteForceViewController: UIViewController {
 
@@ -90,14 +89,14 @@ class BruteForceViewController: UIViewController {
     }
     
     private func _saveDataWithPin(pin: String) {
-        let base64String = try! typedText.encrypt(AES(key: _aesKeyForString(pin), iv: "0123456789012345")).toBase64()
-        
-        NSUserDefaults.standardUserDefaults().setObject(base64String, forKey: "BruteForce")
-        NSUserDefaults.standardUserDefaults().synchronize()
-        
-        let hash = (base64String! + pin).sha256()
-        NSUserDefaults.standardUserDefaults().setObject(hash, forKey: "BruteForceHash")
-        NSUserDefaults.standardUserDefaults().synchronize()
+//        let base64String = try! typedText.encrypt(AES(key: _aesKeyForString(pin), iv: "0123456789012345")).toBase64()
+//        
+//        NSUserDefaults.standardUserDefaults().setObject(base64String, forKey: "BruteForce")
+//        NSUserDefaults.standardUserDefaults().synchronize()
+//        
+//        let hash = (base64String! + pin).sha256()
+//        NSUserDefaults.standardUserDefaults().setObject(hash, forKey: "BruteForceHash")
+//        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     private func _loadDataWithPin(pin: String) {
@@ -109,16 +108,16 @@ class BruteForceViewController: UIViewController {
     }
     
     private func _plainTextWithPin(pin: String) -> String? {
-        if let encryptedBase64: String = NSUserDefaults.standardUserDefaults().objectForKey("BruteForce") as? String, hashToComapre = NSUserDefaults.standardUserDefaults().objectForKey("BruteForceHash") as? String{
-            if let decrypted = try? encryptedBase64.decryptBase64ToString(AES(key: _aesKeyForString(pin), iv: "0123456789012345")) {
-                
-                if (encryptedBase64 + pin).sha256() == hashToComapre {
-                    return decrypted
-                }
-            }
-        } else {
-            UIAlertView(title: "Error", message: "No data", delegate: nil, cancelButtonTitle: "Ok").show()
-        }
+//        if let encryptedBase64: String = NSUserDefaults.standardUserDefaults().objectForKey("BruteForce") as? String, hashToComapre = NSUserDefaults.standardUserDefaults().objectForKey("BruteForceHash") as? String{
+//            if let decrypted = try? encryptedBase64.decryptBase64ToString(AES(key: _aesKeyForString(pin), iv: "0123456789012345")) {
+//                
+//                if (encryptedBase64 + pin).sha256() == hashToComapre {
+//                    return decrypted
+//                }
+//            }
+//        } else {
+//            UIAlertView(title: "Error", message: "No data", delegate: nil, cancelButtonTitle: "Ok").show()
+//        }
         
         return nil
     }
