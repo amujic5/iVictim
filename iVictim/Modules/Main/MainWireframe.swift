@@ -23,6 +23,11 @@ final class MainWireframe: BaseWireframe {
 
 extension MainWireframe: HomeViewControllerOutput {
     
+    func presentSafeWebView() {
+        let view: SafeWebViewController = storyboard.instantiateViewController()
+        navigationController.pushViewController(view, animated: true)
+    }
+    
     func presentScreenshot() {
         let view: ScreenshootViewController = storyboard.instantiateViewController()
         navigationController.pushViewController(view, animated: true)

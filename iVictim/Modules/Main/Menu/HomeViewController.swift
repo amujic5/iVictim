@@ -20,6 +20,7 @@ protocol HomeViewControllerOutput {
     func presentPiracyDetection()
     func presentPasteboard()
     func presentScreenshot()
+    func presentSafeWebView()
 }
 
 final class HomeViewController: UIViewController {
@@ -72,6 +73,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             output.presentPasteboard()
         case .Screenshot:
             output.presentScreenshot()
+        case .SafeWebView:
+            output.presentSafeWebView()
         }
         
     }
@@ -84,6 +87,7 @@ enum MenuItem: String {
     case TransportLayerSecurity = "Transport Layer Security"
     case SSLPinning = "SSL Pinning"
     case CodeInjection = "Code injection"
+    case SafeWebView = "Safe web view"
     case PiracyDetection = "Piracy detection"
     case Pasteboard = "Pasteboard problem"
     case Screenshot = "Screenshot problem"
@@ -96,6 +100,7 @@ enum MenuItem: String {
             MenuItem.TransportLayerSecurity,
             MenuItem.SSLPinning,
             MenuItem.CodeInjection,
+            MenuItem.SafeWebView,
             MenuItem.PiracyDetection,
             MenuItem.Pasteboard,
             MenuItem.Screenshot

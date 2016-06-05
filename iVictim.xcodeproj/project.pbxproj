@@ -14,6 +14,7 @@
 		4313B3231CFF755800D269FF /* BruteForceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B3221CFF755800D269FF /* BruteForceViewController.swift */; };
 		434F7C4B1D02155300951801 /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F7C4A1D02155300951801 /* PasteboardViewController.swift */; };
 		434F7C4E1D021E2A00951801 /* ScreenshootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F7C4D1D021E2A00951801 /* ScreenshootViewController.swift */; };
+		435459AE1D046A0400F8AEA0 /* SafeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435459AD1D046A0400F8AEA0 /* SafeWebViewController.swift */; };
 		43683FA01D00C714008F8156 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683F9F1D00C714008F8156 /* BaseWireframe.swift */; };
 		43683FA51D00CBDF008F8156 /* SecurityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43683FA41D00CBDF008F8156 /* SecurityManager.m */; };
 		43683FAC1D00CDC6008F8156 /* PiracyDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43683FAB1D00CDC6008F8156 /* PiracyDetectionViewController.swift */; };
@@ -58,6 +59,7 @@
 		4313B3221CFF755800D269FF /* BruteForceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BruteForceViewController.swift; sourceTree = "<group>"; };
 		434F7C4A1D02155300951801 /* PasteboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
 		434F7C4D1D021E2A00951801 /* ScreenshootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshootViewController.swift; sourceTree = "<group>"; };
+		435459AD1D046A0400F8AEA0 /* SafeWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeWebViewController.swift; sourceTree = "<group>"; };
 		43683F9F1D00C714008F8156 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		43683FA31D00CBDF008F8156 /* SecurityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityManager.h; sourceTree = "<group>"; };
 		43683FA41D00CBDF008F8156 /* SecurityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityManager.m; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 				434F7C4D1D021E2A00951801 /* ScreenshootViewController.swift */,
 			);
 			path = Screenshoot;
+			sourceTree = "<group>";
+		};
+		435459AC1D0469EC00F8AEA0 /* Safe web view */ = {
+			isa = PBXGroup;
+			children = (
+				435459AD1D046A0400F8AEA0 /* SafeWebViewController.swift */,
+			);
+			path = "Safe web view";
 			sourceTree = "<group>";
 		};
 		43683FA71D00CD86008F8156 /* Piracy Detection */ = {
@@ -345,6 +355,7 @@
 		D341B35596BA7CD46A81C7B0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				435459AC1D0469EC00F8AEA0 /* Safe web view */,
 				434F7C4C1D021E1C00951801 /* Screenshoot */,
 				434F7C491D02154100951801 /* Pasteboard */,
 				43683FA71D00CD86008F8156 /* Piracy Detection */,
@@ -578,6 +589,7 @@
 				43683FAC1D00CDC6008F8156 /* PiracyDetectionViewController.swift in Sources */,
 				43BB81771CFEBF2300591292 /* LocalStorageViewController.swift in Sources */,
 				4313B2F41CFF68A300D269FF /* CoreDataSensitiveModel.xcdatamodeld in Sources */,
+				435459AE1D046A0400F8AEA0 /* SafeWebViewController.swift in Sources */,
 				43683FD71D00D80B008F8156 /* SecurityManagerSwiftWrapper.swift in Sources */,
 				4313B3231CFF755800D269FF /* BruteForceViewController.swift in Sources */,
 				4384DC661CFE162C00FEAD22 /* CellMagic.swift in Sources */,

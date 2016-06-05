@@ -8,7 +8,7 @@
 
 import UIKit
 
-final  class SSLPinningViewController: UIViewController, NSURLSessionDelegate, NSURLSessionTaskDelegate {
+final  class SSLPinningViewController: UIViewController, NSURLSessionDelegate, NSURLSessionTaskDelegate, UITextFieldDelegate {
         
         @IBOutlet weak var urlTextField: UITextField!
         @IBOutlet weak var responseTextView: UITextView!
@@ -24,18 +24,25 @@ final  class SSLPinningViewController: UIViewController, NSURLSessionDelegate, N
         override func viewDidLoad() {
             super.viewDidLoad()
 
+            urlTextField.delegate = self
+            
             //let pathToCert = NSBundle.mainBundle().pathForResource(githubCert, ofType: "cer")
             // print(pathToCert)
             self.configureURLSession()
             
             self.activityIndicator.hidesWhenStopped = true
         }
+
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        resignFirstResponder()
+        return true
+    }
         // MARK: Button actions
  
         @IBAction func nsurlSessionRequestHandler(sender: UIButton) {
