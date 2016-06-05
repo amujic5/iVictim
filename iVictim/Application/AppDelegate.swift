@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         imageView.image = UIImage(named: "screen_image")
         
-        window = UIWindow()
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController

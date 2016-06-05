@@ -26,6 +26,7 @@ final  class SSLPinningViewController: UIViewController, NSURLSessionDelegate, N
 
             //let pathToCert = NSBundle.mainBundle().pathForResource(githubCert, ofType: "cer")
             // print(pathToCert)
+            urlTextField.delegate = self
             self.configureURLSession()
             
             self.activityIndicator.hidesWhenStopped = true
@@ -109,4 +110,13 @@ final  class SSLPinningViewController: UIViewController, NSURLSessionDelegate, N
             }
         }
         
+}
+
+extension SSLPinningViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
