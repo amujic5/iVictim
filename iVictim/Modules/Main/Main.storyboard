@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BasicCell" textLabel="wJW-8d-sOX" style="IBUITableViewCellStyleDefault" id="Pf0-fq-uWG">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pf0-fq-uWG" id="PKS-If-kpd">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -336,14 +336,14 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="thT-NP-Bm7">
-                                <rect key="frame" x="20" y="290" width="335" height="357"/>
+                                <rect key="frame" x="20" y="320" width="335" height="327"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clipboard (pasteboard) cache:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uql-kR-GAb">
-                                <rect key="frame" x="71" y="249" width="233" height="21"/>
+                                <rect key="frame" x="71" y="279" width="233" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -358,10 +358,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfq-K7-uJq">
+                                <rect key="frame" x="107.5" y="239" width="160" height="30"/>
+                                <state key="normal" title="Clear pasteboard items"/>
+                                <connections>
+                                    <action selector="clearPasteboardItemsButtonClicked:" destination="hkw-aS-oGK" eventType="touchUpInside" id="p1z-3v-J0h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="sK5-Jy-Te1" secondAttribute="trailing" constant="20" id="03p-vt-h62"/>
+                            <constraint firstItem="uql-kR-GAb" firstAttribute="top" secondItem="lfq-K7-uJq" secondAttribute="bottom" constant="10" id="7zS-FN-Qc1"/>
                             <constraint firstItem="sK5-Jy-Te1" firstAttribute="leading" secondItem="S4H-IK-EKB" secondAttribute="leading" constant="20" id="8gE-wU-1PY"/>
                             <constraint firstItem="uql-kR-GAb" firstAttribute="top" secondItem="i9a-yF-Z6A" secondAttribute="bottom" constant="20" id="BKh-0I-UxW"/>
                             <constraint firstItem="i9a-yF-Z6A" firstAttribute="centerX" secondItem="S4H-IK-EKB" secondAttribute="centerX" id="E98-TD-vGt"/>
@@ -371,8 +379,15 @@
                             <constraint firstItem="m3W-hz-odt" firstAttribute="top" secondItem="thT-NP-Bm7" secondAttribute="bottom" constant="20" id="e02-ad-Hq0"/>
                             <constraint firstAttribute="trailing" secondItem="thT-NP-Bm7" secondAttribute="trailing" constant="20" id="h9P-mg-gRw"/>
                             <constraint firstItem="thT-NP-Bm7" firstAttribute="leading" secondItem="S4H-IK-EKB" secondAttribute="leading" constant="20" id="iof-H3-Hea"/>
+                            <constraint firstItem="lfq-K7-uJq" firstAttribute="top" secondItem="i9a-yF-Z6A" secondAttribute="bottom" constant="10" id="qC4-NR-Ffh"/>
                             <constraint firstItem="i9a-yF-Z6A" firstAttribute="top" secondItem="sK5-Jy-Te1" secondAttribute="bottom" constant="15" id="vld-Lp-pIu"/>
+                            <constraint firstItem="lfq-K7-uJq" firstAttribute="centerX" secondItem="i9a-yF-Z6A" secondAttribute="centerX" id="xO7-9e-wRk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BKh-0I-UxW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -588,7 +603,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Basic" textLabel="CR2-BZ-Z8Q" style="IBUITableViewCellStyleDefault" id="UVx-2s-VP9">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UVx-2s-VP9" id="lY5-GZ-WTx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>

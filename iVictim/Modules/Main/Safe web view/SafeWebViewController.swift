@@ -69,4 +69,5 @@ class SafeWebViewController: UIViewController, WKNavigationDelegate, UITextField
         
         return true
     }
+    
 }

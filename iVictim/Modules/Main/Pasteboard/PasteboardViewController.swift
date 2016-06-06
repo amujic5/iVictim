@@ -14,6 +14,10 @@ final class PasteboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func clearPasteboardItemsButtonClicked(sender: UIButton) {
+        _clearPasteboard()
+    }
 
     @IBAction func showPasteboardItems(sender: UIButton) {
         _showPaseboardItemsOnScreen()
@@ -26,5 +30,9 @@ final class PasteboardViewController: UIViewController {
         }
         
         responseTextView.text = text
+    }
+    
+    private func _clearPasteboard() {
+        UIPasteboard.generalPasteboard().items = []
     }
 }
