@@ -20,3 +20,14 @@ final class ScreenshootViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().synchronize()
     }
 }
+
+
+extension ScreenshootViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}

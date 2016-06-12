@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BasicCell" textLabel="wJW-8d-sOX" style="IBUITableViewCellStyleDefault" id="Pf0-fq-uWG">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pf0-fq-uWG" id="PKS-If-kpd">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -397,31 +397,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUc-aU-PSD">
-                                <rect key="frame" x="17" y="81" width="341" height="203"/>
+                                <rect key="frame" x="17" y="81" width="341" height="124.5"/>
                                 <string key="text">Imagine this scenario. It is been asked for security question/answer. Just after you enter security you put your app in the background. Once you do that, app will screenshot a screen (because performace) and that photo will be easily reachable. Try going into the background and find that photo. After that, you can turn on switcher below so the app will hide information just before screenshot. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your dog name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIj-sS-Hgd">
-                                <rect key="frame" x="17" y="347" width="185" height="21"/>
+                                <rect key="frame" x="17" y="235.5" width="185" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-du-OuV">
-                                <rect key="frame" x="17" y="376" width="328" height="30"/>
+                                <rect key="frame" x="17" y="264.5" width="328" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CV1-Qn-MoH" id="WhB-t6-LEO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide screen before going into background mode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO1-KW-icS">
-                                <rect key="frame" x="17" y="454" width="259" height="41"/>
+                                <rect key="frame" x="17" y="314.5" width="259" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZGn-K9-iDT">
-                                <rect key="frame" x="296" y="459" width="51" height="31"/>
+                                <rect key="frame" x="296" y="319.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="switcherChangedValue:" destination="CV1-Qn-MoH" eventType="valueChanged" id="MNO-nP-mfB"/>
                                 </connections>
@@ -432,7 +435,7 @@
                             <constraint firstItem="hIj-sS-Hgd" firstAttribute="leading" secondItem="XUc-aU-PSD" secondAttribute="leading" id="1JM-Zt-eiq"/>
                             <constraint firstItem="XUc-aU-PSD" firstAttribute="top" secondItem="9Bv-Kh-Mf4" secondAttribute="bottom" constant="17" id="6bc-oP-ehR"/>
                             <constraint firstAttribute="trailing" secondItem="Sh8-du-OuV" secondAttribute="trailing" constant="30" id="6hx-Lf-YAy"/>
-                            <constraint firstItem="gO1-KW-icS" firstAttribute="top" secondItem="Sh8-du-OuV" secondAttribute="bottom" constant="48" id="8Nb-Ir-vWD"/>
+                            <constraint firstItem="gO1-KW-icS" firstAttribute="top" secondItem="Sh8-du-OuV" secondAttribute="bottom" constant="20" id="8Nb-Ir-vWD"/>
                             <constraint firstItem="gO1-KW-icS" firstAttribute="leading" secondItem="XUc-aU-PSD" secondAttribute="leading" id="9YH-7D-HwG"/>
                             <constraint firstItem="gO1-KW-icS" firstAttribute="trailing" secondItem="XUc-aU-PSD" secondAttribute="trailing" id="CGx-3h-rBp"/>
                             <constraint firstItem="ZGn-K9-iDT" firstAttribute="trailing" secondItem="Sh8-du-OuV" secondAttribute="trailing" id="HID-WY-Ted"/>
@@ -442,7 +445,7 @@
                             <constraint firstItem="ZGn-K9-iDT" firstAttribute="leading" secondItem="gO1-KW-icS" secondAttribute="trailing" constant="20" id="lLC-QC-sgf"/>
                             <constraint firstItem="gO1-KW-icS" firstAttribute="leading" secondItem="XUc-aU-PSD" secondAttribute="leading" id="nIt-jl-YwH"/>
                             <constraint firstItem="Sh8-du-OuV" firstAttribute="leading" secondItem="hIj-sS-Hgd" secondAttribute="leading" id="ofB-QX-Zgu"/>
-                            <constraint firstItem="hIj-sS-Hgd" firstAttribute="top" secondItem="XUc-aU-PSD" secondAttribute="bottom" constant="63" id="tBe-1F-Ckv"/>
+                            <constraint firstItem="hIj-sS-Hgd" firstAttribute="top" secondItem="XUc-aU-PSD" secondAttribute="bottom" constant="30" id="tBe-1F-Ckv"/>
                             <constraint firstItem="XUc-aU-PSD" firstAttribute="leading" secondItem="nYV-N0-P8T" secondAttribute="leading" constant="17" id="tWX-eT-JmW"/>
                             <constraint firstItem="ZGn-K9-iDT" firstAttribute="centerY" secondItem="gO1-KW-icS" secondAttribute="centerY" id="tc0-6O-zrC"/>
                             <constraint firstAttribute="trailing" secondItem="XUc-aU-PSD" secondAttribute="trailing" constant="17" id="xvl-bJ-j9Y"/>
@@ -480,7 +483,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Basic" textLabel="CR2-BZ-Z8Q" style="IBUITableViewCellStyleDefault" id="UVx-2s-VP9">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UVx-2s-VP9" id="lY5-GZ-WTx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
