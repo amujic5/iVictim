@@ -10,6 +10,7 @@
 <img src="assets/bad_log_in.png" width="250" height="444"/>
 </h3>
 
+Log in credentials should never validate locally, therefor, attcker can easily find right password or avoid login.
 
 ### Local storage
 <h3 align="left">
