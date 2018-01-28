@@ -17,15 +17,15 @@ protocol StoryboardIdentifiable {
 
 extension StoryboardIdentifiable where Self: UIViewController {
     static var storyboardIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 
 extension UIViewController : StoryboardIdentifiable { }
 
 extension UIStoryboard {
-    func instantiateViewController<T: UIViewController where T: StoryboardIdentifiable>() -> T {
-        let optionalViewController = self.instantiateViewControllerWithIdentifier(T.storyboardIdentifier)
+    func instantiateViewController<T: UIViewController>() -> T where T: StoryboardIdentifiable {
+        let optionalViewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier)
         
         guard let viewController = optionalViewController as? T  else {
             fatalError("Couldn’t instantiate view controller with identifier \(T.storyboardIdentifier) ")

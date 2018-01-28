@@ -27,9 +27,9 @@ class BruteForceViewController: UIViewController {
         var keyboardType: UIKeyboardType {
             switch self {
             case .FourDigit:
-                return .NumberPad
+                return .numberPad
             case .SixAlphaNumeric:
-                return .ASCIICapable
+                return .asciiCapable
             }
         }
         
@@ -65,7 +65,7 @@ class BruteForceViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
@@ -74,15 +74,15 @@ class BruteForceViewController: UIViewController {
         
         let alertView = UIAlertView(title: pinTypeSelected.alertTitle, message: messsage, delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "Ok")
         
-        alertView.alertViewStyle = .SecureTextInput
-        alertView.textFieldAtIndex(0)?.keyboardType = pinTypeSelected.keyboardType
-        alertView.textFieldAtIndex(0)?.delegate = self
+        alertView.alertViewStyle = .secureTextInput
+        alertView.textField(at: 0)?.keyboardType = pinTypeSelected.keyboardType
+        alertView.textField(at: 0)?.delegate = self
         alertView.show()
     }
     
     private func _aesKeyForString(string: String) -> String{
         var newString = string
-        while newString.characters.count != 16 {
+        while newString.count != 16 {
             newString = newString + "x"
         }
         
@@ -90,18 +90,20 @@ class BruteForceViewController: UIViewController {
     }
     
     private func _saveDataWithPin(pin: String) {
-        let base64String = try! typedText.encrypt(AES(key: _aesKeyForString(pin), iv: "0123456789012345")).toBase64()
         
-        NSUserDefaults.standardUserDefaults().setObject(base64String, forKey: "BruteForce")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        let aes = try! AES(key: _aesKeyForString(string: pin), iv: "0123456789012345") // aes128
+        let base64String = try! aes.encrypt(Array(typedText.utf8))
         
-        let hash = (base64String! + pin).sha256()
-        NSUserDefaults.standardUserDefaults().setObject(hash, forKey: "BruteForceHash")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.set(base64String, forKey: "BruteForce")
+        UserDefaults.standard.synchronize()
+        
+        let hash = (typedText + pin).sha256()
+        UserDefaults.standard.set(hash, forKey: "BruteForceHash")
+        UserDefaults.standard.synchronize()
     }
     
     private func _loadDataWithPin(pin: String) {
-        if let plainText = _plainTextWithPin(pin) {
+        if let plainText = _plainTextWithPin(pin: pin) {
             UIAlertView(title: "Success", message: "Data: \(plainText)", delegate: nil, cancelButtonTitle: "Ok").show()
         } else {
            UIAlertView(title: "Error", message: "Wrong pin", delegate: nil, cancelButtonTitle: "Ok").show()
@@ -109,8 +111,8 @@ class BruteForceViewController: UIViewController {
     }
     
     private func _plainTextWithPin(pin: String) -> String? {
-        if let encryptedBase64: String = NSUserDefaults.standardUserDefaults().objectForKey("BruteForce") as? String, hashToComapre = NSUserDefaults.standardUserDefaults().objectForKey("BruteForceHash") as? String{
-            if let decrypted = try? encryptedBase64.decryptBase64ToString(AES(key: _aesKeyForString(pin), iv: "0123456789012345")) {
+        if let encryptedBase64: String = UserDefaults.standard.object(forKey: "BruteForce") as? String, let hashToComapre = UserDefaults.standard.object(forKey: "BruteForceHash") as? String{
+            if let decrypted = try? encryptedBase64.decryptBase64ToString(cipher: AES(key: _aesKeyForString(string: pin), iv: "0123456789012345")) {
                 
                 if (encryptedBase64 + pin).sha256() == hashToComapre {
                     return decrypted
@@ -123,38 +125,38 @@ class BruteForceViewController: UIViewController {
         return nil
     }
     
-    @IBAction func loadButtonClicked(sender: UIButton) {
+    @IBAction func loadButtonClicked(_ sender: UIButton) {
         saveLoadState = .Load
         _showAlertToEnterPin(message: "To load data")
     }
     
-    @IBAction func saveButtonClicked(sender: UIButton) {
+    @IBAction func saveButtonClicked(_ sender: UIButton) {
         saveLoadState = .Save
         _showAlertToEnterPin(message: "To save data")
     }
 }
 
 extension BruteForceViewController: UITextFieldDelegate {
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        let currentCharacterCount = textField.text?.characters.count ?? 0
+        let currentCharacterCount = textField.text?.count ?? 0
         if (range.length + range.location > currentCharacterCount){
             return false
         }
-        let newLength = currentCharacterCount + string.characters.count - range.length
+        let newLength = currentCharacterCount + string.count - range.length
         return newLength <= pinTypeSelected.maxLenght
     }
 }
 
 extension BruteForceViewController: UIAlertViewDelegate {
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        if let buttonTitle = alertView.buttonTitleAtIndex(buttonIndex) where buttonTitle == "Ok" {
-            if let pin = alertView.textFieldAtIndex(0)?.text {
+    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
+        if let buttonTitle = alertView.buttonTitle(at: buttonIndex), buttonTitle == "Ok" {
+            if let pin = alertView.textField(at: 0)?.text {
                 switch saveLoadState {
                 case .Save:
-                    _saveDataWithPin(pin)
+                    _saveDataWithPin(pin: pin)
                 default:
-                    _loadDataWithPin(pin)
+                    _loadDataWithPin(pin: pin)
                 }
             }
         }

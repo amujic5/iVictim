@@ -15,13 +15,13 @@ protocol CellIdentifiable {
 
 extension CellIdentifiable where Self: UITableViewCell {
     static var cellIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 
 extension CellIdentifiable where Self: UICollectionViewCell {
     static var cellIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 
@@ -30,16 +30,16 @@ extension UICollectionViewCell: CellIdentifiable {}
 
 extension UITableView {
     
-    func dequeueCellAtIndexPath<T: UITableViewCell where T: CellIdentifiable>(indexPath: NSIndexPath) -> T {
-        return dequeueReusableCellWithIdentifier(T.cellIdentifier, forIndexPath: indexPath) as! T
+    func dequeueCellAtIndexPath<T: UITableViewCell>(indexPath: NSIndexPath) -> T where T: CellIdentifiable {
+        return dequeueReusableCell(withIdentifier: T.cellIdentifier, for: indexPath as IndexPath) as! T
     }
     
 }
 
 extension UICollectionView {
     
-    func dequeueCellAtIndexPath<T: UICollectionViewCell where T: CellIdentifiable>(indexPath: NSIndexPath) -> T {
-        return dequeueReusableCellWithReuseIdentifier(T.cellIdentifier, forIndexPath: indexPath) as! T
+    func dequeueCellAtIndexPath<T: UICollectionViewCell>(indexPath: NSIndexPath) -> T where T: CellIdentifiable {
+        return dequeueReusableCell(withReuseIdentifier: T.cellIdentifier, for: indexPath as IndexPath) as! T
     }
     
 }

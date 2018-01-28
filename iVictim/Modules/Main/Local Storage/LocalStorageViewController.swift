@@ -19,7 +19,7 @@ final class LocalStorageViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
@@ -30,35 +30,35 @@ final class LocalStorageViewController: UIViewController {
         
         switch localStorageType {
         case .NSUserDefaults:
-            NSUserDefaults.standardUserDefaults().setObject(textToSave, forKey: keyForStorage)
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.set(textToSave, forKey: keyForStorage)
+            UserDefaults.standard.synchronize()
         case .Plist:
-            let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, .UserDomainMask, true)
+            let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, .userDomainMask, true)
             let documentDirectory = paths[0]
-            let filePath = documentDirectory.stringByAppendingString("/userInfo.plist")
+            let filePath = documentDirectory.appending("/userInfo.plist")
             var plist: [String: AnyObject] = [:]
-            plist[keyForStorage] = textToSave
-            NSDictionary(dictionary: plist).writeToFile(filePath, atomically: true)
+            plist[keyForStorage] = textToSave as AnyObject
+            NSDictionary(dictionary: plist).write(toFile: filePath, atomically: true)
         case .CoreData:
             let appDelegate =
-                UIApplication.sharedApplication().delegate as! AppDelegate
+                UIApplication.shared.delegate as! AppDelegate
             
             let managedContext = appDelegate.managedObjectContext
             
             // try fetch and print
-            let employeesFetch = NSFetchRequest(entityName: "CoreDataSensitiveModel")
+            let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataSensitiveModel")
             
             do {
-                let fetchedEmployees = try managedContext.executeFetchRequest(employeesFetch) as! [CoreDataSensitiveModel]
+                let fetchedEmployees = try managedContext.fetch(employeesFetch) as! [CoreDataSensitiveModel]
                 fetchedEmployees.forEach {
-                    print("\($0.key): \($0.data)")
+                    print("\(String(describing: $0.key)): \(String(describing: $0.data))")
                 }
             } catch {
                 fatalError("Failed to fetch employees: \(error)")
             }
             
             // save
-            let coreDataSenestiveMode = NSEntityDescription.insertNewObjectForEntityForName("CoreDataSensitiveModel", inManagedObjectContext: managedContext) as! CoreDataSensitiveModel
+            let coreDataSenestiveMode = NSEntityDescription.insertNewObject(forEntityName: "CoreDataSensitiveModel", into: managedContext) as! CoreDataSensitiveModel
             coreDataSenestiveMode.key = keyForStorage
             coreDataSenestiveMode.data = textToSave
 
@@ -70,19 +70,19 @@ final class LocalStorageViewController: UIViewController {
             }
             
         case .Keychain:
-            let dictionary = Locksmith.loadDataForUserAccount("myUserAccount")
-            print(dictionary)
-            try! Locksmith.updateData([keyForStorage: textToSave], forUserAccount: "myUserAccount")
+            let dictionary = Locksmith.loadDataForUserAccount(userAccount: "myUserAccount")
+            print(dictionary ?? "")
+            try! Locksmith.updateData(data: [keyForStorage: textToSave], forUserAccount: "myUserAccount")
         case .Realm:
             var realmModel: RealmSensitiveDataModel
-            if let realmSensitiveDataModel = RealmSensitiveDataModel.objectForKey(keyForStorage) {
+            if let realmSensitiveDataModel = RealmSensitiveDataModel.objectForKey(key: keyForStorage) {
                 realmModel = realmSensitiveDataModel
                 print("old data: \(realmModel.data)")
             } else  {
                 realmModel = RealmSensitiveDataModel()
-                realmModel.updateKey(keyForStorage)
+                realmModel.updateKey(key: keyForStorage)
             }
-            realmModel.updateData(textToSave)
+            realmModel.updateData(data: textToSave)
             print("new data: \(realmModel.data)")
         }
         
@@ -97,24 +97,24 @@ extension LocalStorageViewController: UITableViewDelegate, UITableViewDataSource
         return 1
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return LocalStorageType.items.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Basic", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Basic", for: indexPath as IndexPath)
         cell.textLabel?.text = LocalStorageType.items[indexPath.row].rawValue
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        _saveWithLocalStorageType(LocalStorageType.items[indexPath.row])
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        _saveWithLocalStorageType(localStorageType: LocalStorageType.items[indexPath.row])
     }
 }
 

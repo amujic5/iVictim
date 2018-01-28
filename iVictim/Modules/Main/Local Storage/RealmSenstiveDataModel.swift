@@ -12,8 +12,8 @@ import CoreData
 
 final class RealmSensitiveDataModel: Object {
     
-    dynamic var key: String = ""
-    dynamic var data: String = ""
+    @objc dynamic var key: String = ""
+    @objc dynamic var data: String = ""
     
     func updateKey(key: String) {
         let realm = try! Realm()
@@ -46,7 +46,7 @@ final class RealmSensitiveDataModel: Object {
     
     static func objectForKey(key: String) -> RealmSensitiveDataModel? {
         let realm = try! Realm()
-        let realmObject =  realm.objectForPrimaryKey(RealmSensitiveDataModel.self, key: key)
+        let realmObject = realm.object(ofType: RealmSensitiveDataModel.self, forPrimaryKey: key)
         
         return realmObject
     }

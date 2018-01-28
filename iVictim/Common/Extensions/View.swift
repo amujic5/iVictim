@@ -11,8 +11,8 @@ import UIKit
 extension UIView {
     
     var isOnMainWindow: Bool {
-        if let windowFrame = UIApplication.sharedApplication().keyWindow?.frame {
-            return CGRectContainsRect(windowFrame, frame)
+        if let windowFrame = UIApplication.shared.keyWindow?.frame {
+            return windowFrame.contains(frame)
         } else {
             return false
         }
@@ -30,11 +30,11 @@ extension UIView {
     
     @IBInspectable var borderColor2: UIColor {
         get {
-            return UIColor(CGColor: layer.borderColor ?? UIColor.clearColor().CGColor)
+            return UIColor(cgColor: layer.borderColor ?? UIColor.clear.cgColor)
         }
         
         set(borderColor) {
-            layer.borderColor = borderColor.CGColor
+            layer.borderColor = borderColor.cgColor
         }
     }
  
@@ -50,9 +50,9 @@ extension UIView {
     }
     
     static func initViewWithOwner<T: UIView>(owner: AnyObject) -> T {
-        let wrapedView = NSBundle.mainBundle().loadNibNamed(String(T), owner: owner, options: nil)[0]
+        let wrapedView = Bundle.main.loadNibNamed(String(describing: T.self), owner: owner, options: nil)![0]
         guard let view = wrapedView as? T else {
-            fatalError("Couldn’t instantiate view from nib with identifier \(String(T))")
+            fatalError("Couldn’t instantiate view from nib with identifier \(String(describing: T.self))")
         }
         
         return view

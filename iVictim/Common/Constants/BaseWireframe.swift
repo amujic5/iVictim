@@ -19,6 +19,6 @@ class BaseWireframe {
     }
     
     func storyboardName() -> String {
-        return String(String(self).characters.split(".")[1]).stringByReplacingOccurrencesOfString("Wireframe", withString: "")
+        return (String(describing: self).split(separator: ".")[1]).replacingOccurrences(of: "Wireframe", with: "")
     }
 }

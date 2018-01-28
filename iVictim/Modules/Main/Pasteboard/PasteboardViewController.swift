@@ -15,24 +15,24 @@ final class PasteboardViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func clearPasteboardItemsButtonClicked(sender: UIButton) {
+    @IBAction func clearPasteboardItemsButtonClicked(_ sender: UIButton) {
         _clearPasteboard()
     }
 
-    @IBAction func showPasteboardItems(sender: UIButton) {
+    @IBAction func showPasteboardItems(_ sender: UIButton) {
         _showPaseboardItemsOnScreen()
     }
     func _showPaseboardItemsOnScreen() {
-        let pasteboardItems = UIPasteboard.generalPasteboard().items
+        let pasteboardItems = UIPasteboard.general.items
         
         let text = pasteboardItems.reduce("") { (text, object) -> String in
-            text + "\n" + String(object)
+            text + "\n" + String(describing: object)
         }
         
         responseTextView.text = text
     }
     
     private func _clearPasteboard() {
-        UIPasteboard.generalPasteboard().items = []
+        UIPasteboard.general.items = []
     }
 }

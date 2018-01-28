@@ -20,7 +20,7 @@ class BadLogInViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
@@ -30,16 +30,16 @@ class BadLogInViewController: UIViewController {
     }
     
     func isValid() -> Bool {
-        if let username =  usernameTextField.text, password = passwordTextField.text {
+        if let username =  usernameTextField.text, let password = passwordTextField.text {
             return username == "admin" && password == "1234"
         }
         
         return false
     }
     
-    @IBAction func logInButtonClicked(sender: AnyObject) {
+    @IBAction func logInButtonClicked(_ sender: AnyObject) {
         if isValid() {
-            performSegueWithIdentifier("admin", sender: self)
+            performSegue(withIdentifier: "admin", sender: self)
         } else {
             let alertView = UIAlertView(title: "Error", message: "Wrong username and/or password", delegate: nil, cancelButtonTitle: "Ok")
             alertView.show()
